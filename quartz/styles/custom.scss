@@ -1,5 +1,7 @@
 @use "./variables.scss" as *;
 
-strong, b {
-  color: var(--dark);
+:root[saved-theme="dark"] strong,
+:root[saved-theme="dark"] b,
+:root[saved-theme="dark"] code:not(pre code) {
+  color: #e8935a;
 }
