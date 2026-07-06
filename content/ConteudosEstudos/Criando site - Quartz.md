@@ -5,12 +5,14 @@ tags:
   - jardimDigital
 ---
 ## Criando um site pro Jardim Digital
-Para criar o site eu usei o [Quartz](github.com/jackyzha0/quartz), que já possui um template pra obsidian e é de graça. O site fica no próprio GitHub
+Para criar o site eu usei o [Quartz](https://github.com/jackyzha0/quartz), que já possui um template pra obsidian e é de graça. O site fica no próprio GitHub
+
 ## Necessário
 - Ter uma conta no GitHub
 - Ter o GitHub Desktop instalado
-- Uma pasta onde você esteja criando o seu jardim digital
+- Uma pasta onde você esteja criando o seu jardim digital (opcional)
 	- Caso ainda não esteja criando o seu jardim digital, ao executar `npx quartz create` selecione `new`
+
 ## Passo a passo
 1. Instalar o Node.js
 	1. Node.js 22 ou mais novo
@@ -19,6 +21,7 @@ Para criar o site eu usei o [Quartz](github.com/jackyzha0/quartz), que já possu
 	2. Clicar no botão verde **"Use this template"** e em **"Create a new repository"**
 	3. Para o nome do repositório: use **`<seu usuário>.github.io`** — esse nome especial faz seu site ficar na raiz, sem sufixo. (Qualquer outro nome também funciona, só que o site fica em `<seu usuário>.github.io/nome`.)
 	4. Deixa a visibilidade como **Public** — obrigatório para o GitHub Pages funcionar no plano gratuito. Lembre disso: <mark><b>as notas que você publicar serão visíveis para qualquer pessoa</b></mark>
+		1. <mark><b><u>MUITO CUIDADO POIS TUDO QUE TIVER NESSA PASTA FICARÁ PÚBLICO, NÃO COLOQUE INFORMAÇÕES SENSÍVEIS, SENHAS NEM NADA DO TIPO</u></b></mark>
 	5. Clique em **Create repository**.
 3. Clonar com o GitHub Desktop
 	1. Vá em GitHub Desktop → **File → Clone repository**
@@ -116,3 +119,5 @@ jobs:
 	4. Pode sair dessa tela
 9. Enviando tudo para o GitHub
 	1. Agora vá no seu GitHub Desktop e envie tudo que foi criado para o main do `<seu usuário>.github.io`
+10. Agora ao acessar o `<seu usuário>.github.io` no navegador você já irá ver seu site
+11. Daria pra fazer uma limpeza nos arquivos dessa pasta, mas não irei me aprofundar nisso nessa página
