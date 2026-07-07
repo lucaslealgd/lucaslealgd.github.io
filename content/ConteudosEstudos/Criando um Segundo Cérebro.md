@@ -2,8 +2,10 @@
 title: Criando um Segundo Cérebro - Tiago Forte
 tags:
   - livros
+  - jardimDigital
+  - Growing
 ---
-Recursos: [buildingasecondbrain.com/resources](buildingasecondbrain.com/resources)
+Recursos: [buildingasecondbrain.com/resources](https://buildingasecondbrain.com/resources)
 ## Trechos e Anotações
 
 1. Essas experiências têm se tornado cada vez mais comuns à medida que aumenta a quantidade de informações a que temos acesso.
@@ -201,7 +203,7 @@ Recursos: [buildingasecondbrain.com/resources](buildingasecondbrain.com/resource
 
 75. É muito mais fácil **reunir e sintetizar os pensamentos dos outros do que apresentar uma série interminável de ideias geniais de sua autoria**. Você começa a se enxergar como o **curador do pensamento coletivo** de sua rede de contatos, e não como um criador de ideias solitário.
 
-76. Aspecto importante da <mark><b>criatividade</b>: ela é sempre uma <b>montagem de partes já existentes</b></mark>. Todos nós nos baseamos em trabalhos já feitos. Ninguém cria nada do zero.
+76. Aspecto importante da <mark>criatividade: ela é sempre uma montagem de partes já existentes</mark>. Todos nós nos baseamos em trabalhos já feitos. Ninguém cria nada do zero.
 	1. Não utilize o trabalho inteiro dos outros, apenas aspectos ou partes dele.
 	2. Sempre cite todas as suas fontes e influências, mesmo que não seja obrigatório. Dar crédito não diminui o valor do seu trabalho, só aumenta.
 

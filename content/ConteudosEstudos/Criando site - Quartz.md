@@ -3,6 +3,7 @@ title: Criando site - Quartz
 tags:
   - sites
   - jardimDigital
+  - Growing
 ---
 ## Criando um site pro Jardim Digital
 Para criar o site eu usei o [Quartz](https://github.com/jackyzha0/quartz), que já possui um template pra obsidian e é de graça. O site fica no próprio GitHub
