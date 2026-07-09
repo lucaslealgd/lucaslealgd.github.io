@@ -3,9 +3,25 @@ title: Criando um Segundo Cérebro - Tiago Forte
 tags:
   - livros
   - jardimDigital
-  - Growing
+status:
+  - broto 🌿
 ---
+## Resumo:
+- Método **CODE**:
+	- **Capturar**: **guarde** o que repercute em você
+	- **Organizar**: deixe de forma a ter **acionabilidade**
+	- **Destilar**: encontre a **essência** (destacar o que importa!)
+	- **Expressar**: **compartilhe** seu trabalho
+- As informações são **salvas** sendo colocadas em 4 locais:
+	- **Projetos**: Esforços de curto prazo, nos quais está trabalhando agora
+	- **Áreas**: Responsabilidades de longo prazo que você deseja gerir ao longo do tempo
+	- **Recursos**: Temas ou interesses que podem ser úteis no futuro
+	- **Arquivos**: Itens inativos das outras três categorias
+
 Recursos: [buildingasecondbrain.com/resources](https://buildingasecondbrain.com/resources)
+
+---
+# Conteúdos:
 ## Trechos e Anotações
 
 1. Essas experiências têm se tornado cada vez mais comuns à medida que aumenta a quantidade de informações a que temos acesso.
@@ -318,15 +334,3 @@ Recursos: [buildingasecondbrain.com/resources](https://buildingasecondbrain.com/
 118. **A grande magia das informações digitais é que, após a captura, é fácil alterá-las**.
 
 119. Se você quer adotar novos comportamentos, não existe nada mais eficaz do que se cercar de pessoas que já os têm.
-
-## Resumo:
-- Método **CODE**:
-	- **Capturar**: **guarde** o que repercute em você
-	- **Organizar**: deixe de forma a ter **acionabilidade**
-	- **Destilar**: encontre a **essência** (destacar o que importa!)
-	- **Expressar**: **compartilhe** seu trabalho
-- As informações são **salvas** sendo colocadas em 4 locais:
-	- **Projetos**: Esforços de curto prazo, nos quais está trabalhando agora
-	- **Áreas**: Responsabilidades de longo prazo que você deseja gerir ao longo do tempo
-	- **Recursos**: Temas ou interesses que podem ser úteis no futuro
-	- **Arquivos**: Itens inativos das outras três categorias

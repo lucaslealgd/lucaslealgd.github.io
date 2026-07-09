@@ -122,3 +122,36 @@ jobs:
 	1. Agora vá no seu GitHub Desktop e envie tudo que foi criado para o main do `<seu usuário>.github.io`
 10. Agora ao acessar o `<seu usuário>.github.io` no navegador você já irá ver seu site
 11. Daria pra fazer uma limpeza nos arquivos dessa pasta, mas não irei me aprofundar nisso nessa página
+
+## Notas do diário
+- Para adicionar notas como se fosse um diário vamos usar o **`recent-notes`** que já vem instalado
+- Procurar por recent-notes no `quartz.config.yaml` e trocar o `enabled: false` por:
+```
+plugins:
+  - source: github:quartz-community/recent-notes
+    enabled: true
+    options:
+      title: "Últimas sementes"
+      limit: 3
+      showTags: true
+      hideTagPages: true
+      hideFolderPages: true
+    layout:
+      position: afterBody
+      priority: 20
+```
+
+- o Quartz vai colocar automaticamente abaixo da Home quando publicar
+- Agora configure o Daily Notes no Obsidian
+	- Crie 2 pastas: `diario` e `template`
+		- Em `template` crie um arquivo com o template que você quer usar nas suas notas
+			- Se quiser pode copiar o meu: [[diario]]
+	- Clica no ícone de engrenagem (Settings)
+	- Plugins nativos > ativa Notas Diárias
+	- Agora em Notas Diárias no canto esquerdo preencha:
+		- **Formato de data**: YYYY/MM/YYYY-MM-DD
+			- Isso vai criar uma pasta por ano e por mês
+		- **Local para novos arquivos**: selecione a pasta `diario` que você criou
+		- **Local do arquivo modelo**: selecione o template criado acima
+- Para criar uma nota, é só no ícone de calendário do lado esquerdo e pedir para criar a nota de hoje: 
+  ![Criar nota de hoje](../imagens/Conteudos/JardimDigital/CriarNotaHoje.png)
