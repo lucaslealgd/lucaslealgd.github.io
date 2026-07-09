@@ -227,7 +227,11 @@ plugins:
       links:
         GitHub: https://github.com/jackyzha0/quartz
         Discord Community: https://discord.gg/cRFFHYye7t
-  - source: github:lucaslealgd/recent-notes
+  - source: 
+      repo: "https://github.com/lucaslealgd/lucaslealgd.github.io.git"
+      subdir: ".quartz/plugins/recent-notes"
+      ref: main
+      name: recent-notes
     enabled: true
     layout:
       position: afterBody
