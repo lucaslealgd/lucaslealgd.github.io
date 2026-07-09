@@ -217,10 +217,13 @@
       "installedAt": "2026-07-05T00:50:28.351Z"
     },
     "recent-notes": {
-      "source": "github:quartz-community/recent-notes",
-      "resolved": "https://github.com/quartz-community/recent-notes.git",
-      "commit": "3c3d104335e2fc5ff62371ead157667adb79b046",
-      "installedAt": "2026-07-05T00:50:28.851Z"
+      "source": {
+        "name": "recent-notes",
+        "repo": "https://github.com/lucaslealgd/lucaslealgd.github.io.git",
+        "subdir": ".quartz/plugins/recent-notes",
+        "ref": "v5"
+      },
+      "resolved": "https://github.com/lucaslealgd/lucaslealgd.github.io.git"
     },
     "remove-draft": {
       "source": "github:quartz-community/remove-draft",
