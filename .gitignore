@@ -9,6 +9,7 @@ private/
 .replit
 replit.nix
 quartz/cli/tui/dist/
+
 .quartz/*
 !.quartz/plugins/
 .quartz/plugins/*
