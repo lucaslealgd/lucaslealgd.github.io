@@ -1,5 +1,4 @@
 .DS_Store
-.gitignore
 node_modules
 public
 prof
@@ -9,5 +8,9 @@ tsconfig.tsbuildinfo
 private/
 .replit
 replit.nix
-.quartz/
 quartz/cli/tui/dist/
+.quartz/*
+!.quartz/plugins/
+.quartz/plugins/*
+!.quartz/plugins/recent-notes/
+!.quartz/plugins/recent-notes/**
