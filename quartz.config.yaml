@@ -230,7 +230,7 @@ plugins:
   - source: 
       repo: "https://github.com/lucaslealgd/lucaslealgd.github.io.git"
       subdir: ".quartz/plugins/recent-notes"
-      ref: main
+      ref: v5
       name: recent-notes
     enabled: true
     layout:
