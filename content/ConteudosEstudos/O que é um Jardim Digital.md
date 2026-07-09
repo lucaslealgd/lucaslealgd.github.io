@@ -7,6 +7,11 @@ status:
 ---
 Lendo o livro [[Criando um Segundo Cérebro]] eu me deparei a primeira vez com a ideia do que seria um **Jardim Digital**
 Logo após algumas coisas relacionadas a isso começaram a aparecer pra mim no TikTok como o vídeo [[O que é um Jardim Digital#Use a internet a seu favor (@maiastrz)]] e outros conteúdos que vou falar logo aqui abaixo
+Nesse tempo veio a pergunta: **"Você tem algum hobby que não seja consumir?"**. E aqui eu não estou falando de apenas comprar, mas de **ficar horas rolando o feed do tiktok e no final do dia sequer conseguir listar 3 ou 4 conteúdos que você riu, ou que achou interessante ou que você sequer se lembre**
+O que era pra ser um momento pra gente se distrair e desligar um pouco, acaba virando mais ansiedade, fomo e até uma raiva devido a quantidade de conteúdos que fazem mal pra gente. Antigamente a gente assistia um filme e se distraia, hoje a gente consome conteúdo talvez por 2, 3 horas e sente que não descansou (muitas vezes pelo contrário).
+**A ideai do jardim digital é exatamente tornar a gente mais consciente do que estamos consumindo** e dali **tirar alguns brotos** (ideias) **que depois podem crescer e virar árvores** (projetos seus, como um artigo no LinkedIn, um vídeo no YouTube ou até mesmo uma nova ideia revolucionário que vai fazer você ficar milionário)
+- E isso não é sobre fazer tudo virar um trabalho, mas sobre ter mais qualidade nos seus momentos de lazer. É pra tentar buscar um consumo mais proveitoso e até mesmo mais divertido (e também treinar seu algoritmo para coisas que te façam bem, afinal o que mais tem nas redes sociais é ragebait)
+	- Inclusive se você quer saber mais sobre ragebait recomendo fortemente esse vídeo: [RAGE BAIT: expondo Virgínia, Malu Borges e a cultura do ódio (O Jean Luca)](https://www.youtube.com/watch?v=a8wgvfvP0NM&t=934s)
 
 # Conteúdos:
 ## Use a internet a seu favor (@maiastrz)
