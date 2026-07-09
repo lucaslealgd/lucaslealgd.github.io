@@ -222,19 +222,13 @@ plugins:
       position: afterBody
       priority: 10
   - source: github:quartz-community/footer
-    enabled: true
+    enabled: false
     options:
       links:
         GitHub: https://github.com/jackyzha0/quartz
         Discord Community: https://discord.gg/cRFFHYye7t
   - source: github:quartz-community/recent-notes
     enabled: true
-    options:
-      title: "Últimas sementes"
-      limit: 3
-      showTags: true
-      hideTagPages: true
-      hideFolderPages: true
     layout:
       position: afterBody
       priority: 20

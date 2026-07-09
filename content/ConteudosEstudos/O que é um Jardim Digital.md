@@ -15,11 +15,11 @@ O que era pra ser um momento pra gente se distrair e desligar um pouco, acaba vi
 
 Então, vamos responder...
 ## O que é um Jardim Digital?
-- É um espaço pessoal onde **o objetivo e ir <mark><b>cultivando ideias</b></mark> ao longo do tempo**
+- É um espaço pessoal onde **o objetivo e ir <mark>cultivando ideias</mark> ao longo do tempo**
 	- "É um **lugar para você plantar as suas ideias**, registrar coisas que aprecia, desenvolver as ideias de uma forma **contínua, orgânica e não linear**. É uma coleção de **ideias livres e em evolução**"
 - Diferente de um blog que acontece em ordem cronológica, no jardim o ponto principal é **a conexão entre as publicações** (inclusive podemos ver o link entre elas)
 - Ao invés de publicar textos finalizados e bonitinhos, a intenção é exatamente ser **algo constantemente em construção**. Você **planta ideias** (sementes) e **vai cuidando delas** ao longo do tempo até elas virarem algo (árvores)
-- O seu jardim digital <mark><b>nunca está pronto!</b></mark> E é essa a parte fantástica!
+- O seu jardim digital <mark>nunca está pronto!</mark> E é essa a parte fantástica!
 	- Você pode estar sempre voltando em uma nota e melhorando, recriando algo, aprendendo uma coisa nova, apagando o que não faz mais sentido
 	- A ideia é que **as anotações vão crescendo de semente (🌱) pra broto (🌿) e finalmente pra árvore (🌲)**
 - Diferente de outros lugares que você escreve pra audiência, **aqui você vai escrever primeiramente pra você mesmo, aprendendo em público e quem quiser vai passear por ali** (e pode contribuir também)

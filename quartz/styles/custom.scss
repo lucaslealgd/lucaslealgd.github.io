@@ -5,3 +5,10 @@
 :root[saved-theme="dark"] code:not(pre code) {
   color: #e8935a;
 }
+
+.recent-notes .recent-summary {
+  margin: 0.25rem 0 0.75rem 0;
+  opacity: 0.75;
+  font-size: 0.95rem;
+  line-height: 1.45;
+}
