@@ -140,7 +140,7 @@ export default ((userOpts?: Partial<RecentNotesOptions>) => {
 
                   {description && (
                     <p class="recent-summary">
-                      TESTES 2
+                      {description}
                     </p>
                   )}
                   
