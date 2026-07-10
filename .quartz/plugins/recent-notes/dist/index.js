@@ -522,10 +522,12 @@ var RecentNotes_default = ((userOpts) => {
       /* @__PURE__ */ u2("h3", { children: opts.title ?? i18n(locale).components.recentNotes.title }),
       /* @__PURE__ */ u2("ul", { class: "recent-ul", children: pages.slice(0, opts.limit).map((page) => {
         const title = page.frontmatter?.title ?? "Untitled";
+        const description = typeof page.frontmatter?.description === "string" ? page.frontmatter.description : void 0;
         const tags = page.frontmatter?.tags ?? [];
         return /* @__PURE__ */ u2("li", { class: "recent-li", children: /* @__PURE__ */ u2("div", { class: "section", children: [
           /* @__PURE__ */ u2("div", { class: "desc", children: /* @__PURE__ */ u2("h3", { children: /* @__PURE__ */ u2("a", { href: resolveRelative(slug2, page.slug), class: "internal", children: title }) }) }),
           page.dates && getDate(withResolvedDateType(page, cfg)) && /* @__PURE__ */ u2("p", { class: "meta", children: /* @__PURE__ */ u2("time", { datetime: getDate(withResolvedDateType(page, cfg)).toISOString(), children: formatDate(getDate(withResolvedDateType(page, cfg)), locale) }) }),
+          description && /* @__PURE__ */ u2("p", { class: "recent-summary", children: "TESTES 2" }),
           opts.showTags && /* @__PURE__ */ u2("ul", { class: "tags", children: tags.map((tag) => /* @__PURE__ */ u2("li", { children: /* @__PURE__ */ u2("a", { class: "internal tag-link", href: resolveRelative(slug2, `tags/${tag}`), children: tag }) })) })
         ] }) });
       }) }),
