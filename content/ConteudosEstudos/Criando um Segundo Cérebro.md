@@ -51,6 +51,8 @@ Recursos: [buildingasecondbrain.com/resources](https://buildingasecondbrain.com/
 13. Sempre que criar uma nota, pergunte-se: "Como posso tornar isso o mais útil possível para usar no futuro?" Você começará a anotar as palavras e frases que explicam por que criou a nota, em que estava pensando e o que exatamente chamou sua atenção. **Suas notas serão inúteis se você não conseguir decifrá-las no futuro ou se forem tão longas que você não vai sequer tentar**.
 
 14. Talvez sejam necessárias centenas de páginas e milhares de palavras para explicar completamente uma ideia complexa, mas **sempre há uma forma de transmitir a mensagem principal em apenas uma ou duas frases**. Einstein ficou famoso por resumir sua nova e revolucionária teoria da física com a equação E = mc2. Se ele foi capaz de destilar todo o seu pensamento numa equação tão refinada, você certamente conseguirá resumir os pontos principais de qualquer artigo, livro, vídeo ou apresentação -> <b><u>Se Einstein foi capaz de resumir toda sua teoria em E=mc², você consegue resumir sua ideia em 1 ou 2 frases!</u></b>
+![](../imagens/Livros/CriandoUmSegundoCerebro/E=mc2.jpeg)
+
 
 15. **A informação só se torna conhecimento** – pessoal, incorporado, verificado – **quando é utilizada**. Você só ganha confiança naquilo que sabe quando tem certeza de que funciona. Antes disso, tudo não passa de teoria.
 
