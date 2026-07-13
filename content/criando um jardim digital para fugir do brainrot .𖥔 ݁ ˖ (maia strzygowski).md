@@ -6,8 +6,19 @@ status:
   - broto 🌿
 ---
 # Resumo
-
-
+**"Você tem algum hobby que não seja consumir?"**
+	- Não só produtos, mas também conteúdo -> **o valor das coisas está naquilo que você retem delas**
+		- mas como reter se a gnt é bombardeado com informações? -> usando o **jardim digital**
+<mark>Jardim Digital</mark>
+- o objetivo é **conectar ideias**
+	- Conseguimos usar tags (`#`) e até links entre os conteúdos para vermos a teia de informação que está sendo gerada
+- Você vai **pegar tudo que tocar em você** de alguma forma e salvar como **sementes (vai plantar suas ideias)**
+	- Pode ser um vídeo, trecho de livro, música, qualquer coisa. Joga no jardim e faz um breve resumo
+		- Isso te obriga minimamente a **refletir sobre o que consumiu** e reter a informação
+	- Essas ideias serão desenvolvidas de forma **contínua, orgânica e não linear** até virarem **brotos** (ideias mais desenvolvidas) e finalmente **árvores** (ideias prontas que servirão de base para a sua arte)
+- O seu jardim **nunca está pronto**, ele está sempre evoluindo! E ele **é algo pra você!**
+	- Tem que refletir suas necessidades e não precisa ser algo público ou performático
+Quantas vezes você já deixou de seguir o conteúdo que queria fazer pra criar aquilo que vai mais engajar? Estamos consumindo o tiktok ou sendo consumidos por ele?
 # Conteúdo
 Vídeo: criando um jardim digital para fugir do brainrot .𖥔 ݁ ˖ (maia strzygowski)
 Link: https://youtu.be/O9Prnl_IuMs?si=IJwyS8aCCMtt6T9J

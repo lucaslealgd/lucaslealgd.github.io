@@ -5,6 +5,13 @@ tags:
 status:
   - broto 🌿
 ---
+# Resumo
+<mark>O que é um Jardim Digital?</mark>
+Será o lugar pra você **cultivar suas ideias ao longo do tempo e conectar os assuntos**
+Ele serve para nos **tornar mais conscientes do que estamos consumindo** através do **plantio de sementes** (conteúdos que consumimos) que serão cuidadas e desenvolvidas em pequenos **brotos** (nota com alguns insights, resumos e ideias que tivemos) até finalmente virar uma **árvore** (um conteúdo mais trabalhado que pode virar a nossa arte)
+
+
+# Conteúdo
 Lendo o livro [[Criando um Segundo Cérebro]] eu me deparei a primeira vez com a ideia do que seria um **Jardim Digital**
 Logo após algumas coisas relacionadas a isso começaram a aparecer pra mim no TikTok como o vídeo [[O que é um Jardim Digital#Use a internet a seu favor (@maiastrz)]] e outros conteúdos que vou falar logo aqui abaixo
 Nesse tempo veio a pergunta: **"Você tem algum hobby que não seja consumir?"**. E aqui eu não estou falando de apenas comprar, mas de **ficar horas rolando o feed do tiktok e no final do dia sequer conseguir listar 3 ou 4 conteúdos que você riu, ou que achou interessante ou que você sequer se lembre**
