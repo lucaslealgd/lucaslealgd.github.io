@@ -18,6 +18,9 @@ status:
 	- Essas ideias serão desenvolvidas de forma **contínua, orgânica e não linear** até virarem **brotos** (ideias mais desenvolvidas) e finalmente **árvores** (ideias prontas que servirão de base para a sua arte)
 - O seu jardim **nunca está pronto**, ele está sempre evoluindo! E ele **é algo pra você!**
 	- Tem que refletir suas necessidades e não precisa ser algo público ou performático
+- Ele não é sobre a ferramenta, é muito mais sobre o conceito
+	- Pode usar Obsidian (que eu uso), Capacities (que a Maia usa), Sublime, etc
+		- **A melhor ferramenta é aquela que atende as SUAS necessidades**
 Quantas vezes você já deixou de seguir o conteúdo que queria fazer pra criar aquilo que vai mais engajar? Estamos consumindo o tiktok ou sendo consumidos por ele?
 # Conteúdo
 Vídeo: criando um jardim digital para fugir do brainrot .𖥔 ݁ ˖ (maia strzygowski)
