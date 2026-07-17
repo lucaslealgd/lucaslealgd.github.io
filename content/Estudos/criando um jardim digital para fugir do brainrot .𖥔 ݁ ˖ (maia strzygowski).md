@@ -21,6 +21,7 @@ status:
 - Ele não é sobre a ferramenta, é muito mais sobre o conceito
 	- Pode usar Obsidian (que eu uso), Capacities (que a Maia usa), Sublime, etc
 		- **A melhor ferramenta é aquela que atende as SUAS necessidades**
+O grande objetivo é que o Jardim Digital te ajude a construir seu repertório e voltar a estudar por prazer
 Quantas vezes você já deixou de seguir o conteúdo que queria fazer pra criar aquilo que vai mais engajar? Estamos consumindo o tiktok ou sendo consumidos por ele?
 # Conteúdo
 Vídeo: criando um jardim digital para fugir do brainrot .𖥔 ݁ ˖ (maia strzygowski)

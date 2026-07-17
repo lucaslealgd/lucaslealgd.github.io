@@ -1,5 +1,31 @@
+---
+title: Como transformar suas anotações de leitura em ideias interconectadas | Jardim digital para leitores (Julia Ledra)
+tags:
+  - jardimDigital
+status:
+  - broto 🌿
+---
 # Resumo
+- Confiar apenas na sua memória com a quantidade de informações que temos hoje é saber que vai ser deixado na mão, pra isso surge o **Segundo Cérebro** 
+	- É onde **anotamos**, onde está a matéria prima (os ingredientes)
+		- Pode vir de qualquer lugar e **deve fazer sentido pra você** (é algo apenas seu)
+	- Livro: [[Criando um Segundo Cérebro]]
+- Só que podemos potencializar esse Segundo Cérebro conectando as informações -> daí surge o **Jardim Digital**
+	- É transformar os ingredientes no bolo, ou seja, as anotações na nossa arte
+	- Desenvolver as anotações e tirar algo dali
+		- **A criatividade é quando você conecta as informações para tirar algo a partir disso**
 
+> Hoje a vida é uma prova com consulta, você não precisa lembrar de tudo!
+- Só que a consulta só vai ser útil se você **organizá-la de uma forma que seja fácil de acionar**
+
+> [!Citação:]
+> Tudo que vale a pena fazer, vale a pena fazer pela metade. Tentar e falhar, fazer apenas o mínimo ou conseguir menos do que você queria quase nunca vai deixar você em uma situação pior do que se não tivesse feito nada.
+
+- "**O raciocínio é o da atomicidade**. Quando cada vídeo/livro/artigo **tem sua própria nota**, cada um pode crescer no seu ritmo (um pode ficar semente pra sempre, outro vira árvore), e principalmente: cada um pode se conectar a **vários** temas ao mesmo tempo. É aí que o jardim ganha vida."
+- Não precisa ficar caçando coisas para colocar no seu jardim, deixa que isso aconteça de forma natural
+	- **"guardar aquilo que repercute em você"**
+	- **Não seja apenas um acumulador de informações!**
+	- tenha um grupo no whatsapp com você mesmo para mandar lá e depois passar pro seu jardim (facilita a vida)
 # Conteúdo
 Vídeo: Como transformar suas anotações de leitura em ideias interconectadas | Jardim digital para leitores (Julia Ledra)
 Link: https://youtu.be/wiQe4-ITKzc?si=v5p9vxll9Fu8fkjL
@@ -23,7 +49,8 @@ Link: https://youtu.be/wiQe4-ITKzc?si=v5p9vxll9Fu8fkjL
 	- O jardim digital de cada pessoa vai ser diferente
 	- É pra ser algo legal, que te dê prazer
 	- **Qualquer coisa pode virar uma nota**
-- Não seja um acumulador de informações
+- **Não seja um acumulador de informações**
+### Obsidian
 - Ela usa o **Obsidian**
 	- Gratuito
 	- é simples de usar
@@ -39,6 +66,7 @@ Link: https://youtu.be/wiQe4-ITKzc?si=v5p9vxll9Fu8fkjL
 	- ![](../imagens/Conteudos/JardimDigital/tags.png)
 - Quando você sente que está procrastinando e sem conseguir fazer algo o que você precisa fazer é a menor ação possível
 	- Tudo que vale a pena ser feito, vale a pena ser malfeito
+
 >  “Tudo que vale a pena fazer, vale a pena fazer pela metade. Tentar e falhar, fazer apenas o mínimo ou conseguir menos do que você queria quase nunca vai deixar você em uma situação pior do que se não tivesse feito nada.” - u/SKIKS no reddit
 
 - Você precisa entender que sua nota **pode vir de qualquer coisa**

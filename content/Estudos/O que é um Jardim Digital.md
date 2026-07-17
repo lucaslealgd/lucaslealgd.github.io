@@ -9,13 +9,27 @@ status:
 <mark>O que é um Jardim Digital?</mark>
 Será o lugar pra você **cultivar suas ideias ao longo do tempo e conectar os assuntos**
 Ele serve para nos **tornar mais conscientes do que estamos consumindo** através do **plantio de sementes** (conteúdos que consumimos) que serão cuidadas e desenvolvidas em pequenos **brotos** (nota com alguns insights, resumos e ideias que tivemos) até finalmente virar uma **árvore** (um conteúdo mais trabalhado que pode virar a nossa arte)
-
-
-# Conteúdo
+- Ele está em **constante evolução** e nunca está pronto, então não se cobre por algo perfeito
+- **Relacione as informações usando tags e links entre os artigos**
+- O processo basicamente vai ser:
+	- Viu algo que te tocou? Salva isso como uma nota -> **semente (🌱)**
+		- Não está com seu jardim aberto? Manda pra um grupo no whatsapp e depois passa pro seu jardim
+		- Não seja acumulador de notas, deixa que elas venham naturalmente
+	- Volta nessa nota e tenta escrever um pouco sobre ela -> **broto (🌿)**
+	- Se puder, faça um resumo que consiga explicar a nota, trazendo insights e **criando algo seu**  -> **árvore (🌲)**
+		- Se você não consegue explicar o conteúdo em poucas linhas, talvez ainda não tenha compreendido.
+- Depois de entender o conteúdo das pessoas, é hora de **você se convidar pra conversa, relacionando suas experiências , discordâncias e outras referências**
+- Use notas relacionadas e conteúdos com a mesma tag pra ir **criando seus próprios conteúdos** e mostrar isso pro mundo
+- Use a ferramenta que mais fizer sentido pra você
+- Sempre mantenha o conceito de **atomicidade**, tendo uma nota própria para cada um dos seus conteúdos
+	- Cada nota vai seguir o seu próprio ritmo e se conectar a temas diferentes
+- O **Segundo Cérebro é a base do Jardim Digital**, o lugar onde você vai capturar e guardar as suas notas. Daí quando você conecta e vai criando a partir disso você começa a cultivar o seu Jardim Digital
+	- Leia mais sobre Segundo Cérebro em [[Criando um Segundo Cérebro]]
+# Anotações
 Lendo o livro [[Criando um Segundo Cérebro]] eu me deparei a primeira vez com a ideia do que seria um **Jardim Digital**
-Logo após algumas coisas relacionadas a isso começaram a aparecer pra mim no TikTok como o vídeo [[O que é um Jardim Digital#Use a internet a seu favor (@maiastrz)]] e outros conteúdos que vou falar logo aqui abaixo
-Nesse tempo veio a pergunta: **"Você tem algum hobby que não seja consumir?"**. E aqui eu não estou falando de apenas comprar, mas de **ficar horas rolando o feed do tiktok e no final do dia sequer conseguir listar 3 ou 4 conteúdos que você riu, ou que achou interessante ou que você sequer se lembre**
-O que era pra ser um momento pra gente se distrair e desligar um pouco, acaba virando mais ansiedade, fomo e até uma raiva devido a quantidade de conteúdos que fazem mal pra gente. Antigamente a gente assistia um filme e se distraia, hoje a gente consome conteúdo talvez por 2, 3 horas e sente que não descansou (muitas vezes, nos sentimos até mais cansado).
+Logo após algumas coisas relacionadas a isso começaram a aparecer pra mim no TikTok como o vídeo [[Use a internet a seu favor (@maiastrz)]] e outros conteúdos que vou falar logo aqui abaixo
+Nesse vídeo veio a pergunta: **"Você tem algum hobby que não seja consumir?"**. E aqui eu não estou falando de apenas comprar, mas de **ficar horas rolando o feed do tiktok e no final do dia sequer conseguir listar 3 ou 4 conteúdos que você riu, ou que achou interessante ou que você sequer se lembre**
+O que era pra ser um momento pra gente se distrair e desligar um pouco, acaba virando mais ansiedade, FOMO e até uma raiva devido a quantidade de conteúdos que fazem mal pra gente. Antigamente a gente assistia um filme e se distraia, hoje a gente consome conteúdo talvez por 2, 3 horas e sente que não descansou (muitas vezes, nos sentimos até mais cansado).
 **A ideai do jardim digital é exatamente tornar a gente mais consciente do que estamos consumindo** e dali **tirar alguns brotos** (ideias) **que depois podem crescer e virar árvores** (projetos seus, como um artigo no LinkedIn, um vídeo no YouTube ou até mesmo uma nova ideia revolucionário que vai fazer você ficar milionário)
 - E isso **não é sobre fazer tudo virar um trabalho, mas sobre ter mais qualidade nos seus momentos de lazer**. É pra tentar buscar um consumo mais proveitoso e até mesmo mais divertido (e também treinar seu algoritmo para coisas que te façam bem, afinal o que mais tem nas redes sociais é ragebait)
 	- Inclusive se você quer saber mais sobre ragebait recomendo fortemente esse vídeo: [RAGE BAIT: expondo Virgínia, Malu Borges e a cultura do ódio (O Jean Luca)](https://www.youtube.com/watch?v=a8wgvfvP0NM&t=934s)
@@ -36,8 +50,9 @@ Então, vamos responder...
 
 E agora surge a pergunta...
 ## Como fazer meu jardim digital?
-- Não vou falar de ferramentas aqui, mas em breve vou criar conteúdo explicando como eu uso o Obsidian pra isso.
+- Não vou falar de ferramentas aqui, mas em breve vou criar conteúdo explicando como eu uso o [[Obsidian]] pra isso.
 - **Quando você tiver consumindo algo** e achar interessante (quando **aquilo te tocar** de alguma forma) **pega o link disso e joga aqui no seu jardim** (cria uma nova nota e coloca a URL lá)
+	- Para praticidade, **cria um grupo no WhatsApp com você** e se você tiver consumindo tiktok/instagram na rua e achar algo legal jogue nesse grupo e depois passa pro seu jardim
 - Tira um tempinho pra **ver aquilo com atenção** e **tenta fazer uma lista de insights interessantes, um resumo ou qualquer anotação sobre o que você achou dele**
 	- Nesse momento sua anotação vai ser uma pequena **semente (🌱)**
 	- Isso te obriga a refletir sobre aquilo que você consumiu e a reter melhor essa informação
@@ -53,7 +68,7 @@ E agora surge a pergunta...
 	- Pense no que faz mais sentido nessa nota e coloque tags de acordo com isso, no momento que escrevo eu tenho basicamente 3 tags por enquanto: jardimDigital (todos os conteúdos relacionados a o que é e como criar jardins digitais), livros (todos os conteúdos que vieram de livros que eu li) e ferramentes (conteúdos sobre ferramentas que eu uso como Obsidian e GitHub)
 	- Não precisa fazer sentido pros outros, desde que faça sentido pra você e seja possível relacionar os seus assuntos
 - **Crie também links entre os seus conteúdos**, por exemplo um livro que eu crie uma anotação dele e que tem muita relação com esse assunto é o [[Criando um Segundo Cérebro]]
-- Agora pense nisso que você tá fazendo como algo em constante evolução e vá adicionando as melhorias que achar melhor, teste layous, ferramentas e principalmente mostra para as pessoas para que você tenha feedbacks
+- Agora pense nisso que você tá fazendo como algo em **constante evolução** e vá adicionando as melhorias que achar melhor, teste layous, ferramentas e principalmente mostre para as pessoas para que você tenha feedbacks
 
 # Links:
 - [[Use a internet a seu favor (@maiastrz)]]
