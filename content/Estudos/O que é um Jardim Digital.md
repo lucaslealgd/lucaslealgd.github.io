@@ -75,4 +75,47 @@ E agora surge a pergunta...
 - [[criando um jardim digital para fugir do brainrot .𖥔 ݁ ˖ (maia strzygowski)]]
 - [[Criando um jardim digital para acabar com o meu scroll infinito (Anna Howard)]]
 - [[Como transformar suas anotações de leitura em ideias interconectadas - Jardim digital para leitores (Julia Ledra)]]
+# Criações
+[[[CURTOS] Você tem algum hobby que não seja consumir]]
 
+## O que é um Jardim Digital?
+- apresentar um conceito que **mudou totalmente a minha forma de consumir conteúdo**
+- **Jardim Digital**
+- está assistindo um vídeo e algo repercutiu em você? **Crie uma nota** 
+	- desacelerar
+	- pensar sobre o que consome
+- use **tags e links**
+	- rede de informações
+	- conexões -> + importante que timeline
+- traga referências, tenha diversidade de conteúdo
+	- te faz buscar mais
+- **nunca está pronto**, é imperfeito, pessoal e experimental
+- faz parte **consumir**, mas você pode tornar isso melhor e talvez **usar isso para começar a criar algo realmente seu**
+- primeiro você se esforça, **depois fica natural**
+- quanto mais você se interessar sobre diferentes assuntos, mais você via ficar interessante (pessoas com repertório são legais)
+> Hoje a vida é uma prova com consulta, você não precisa lembrar de tudo!
+	- [[Como transformar suas anotações de leitura em ideias interconectadas - Jardim digital para leitores (Julia Ledra)]]
+
+
+
+## Como melhorar seu uso da internet
+Eu sei que você se sente culpado depois de ficar 3 horas scrollando o seu celular e sentir que nem sequer aproveitou esse tempo, não teve 1 risada, sequer um conteúdo que te deixou feliz. Apenas raiva, fomo e ansiedade
+E eu sei disso pq era o que acontecia comigo
+O algoritmo não foi feito pra te agradar, foi feito apenas pra te manter mais tempo por aqui. E se o preço pra isso for fazer você ficar com ódio, se sentir mal ou até ter sentimentos piores, pra eles tudo bem, afinal o que importa é o seu tempo que vira dinheiro pra eles
+E eu queria te contar o que eu fiz que me ajudou bastante a não só melhorar essa sensação mas até mesmo me tornar mais criativo
+- tornarmos **"consumidores melhores"**
+	- consumir com intenção
+	- Controlar o algoritmo ao invés de deixar que ele te controle
+- fazer **anotações**
+	- **Making > Consuming**
+	- desacelerar
+- guardar essas anotações no seu **Jardim Digital**
+	- pensar sobre elas
+		- pensar sobre o que está consumindo
+	- rede de informações
+		- tags e links
+- faz parte consumir, o importante é **estar ali enquanto consome**
+- bloqueie conteúdos ruins / tigrinhos
+- procure pelo **consumo que faz a criatividade ser inevitável**
+- se interesse pelas coisas
+	- Afinal **para ser mais interessante, você precisa ser mais interessado!**
