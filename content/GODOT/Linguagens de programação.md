@@ -1,0 +1,2 @@
+*A GODOT possui uma linguagem específica chamada **GDScript***, porém também é possível usar C# e através do **GDExtension** outras linguagens como C++ (para iniciantes o GDScript é mais simples que C#)
+Para quem é totalmente iniciante, o _Learn GDScript From Zero_ (Aprenda GDScript Do Zero) da GDQuest é um tutorial interativo livre e de código aberto
