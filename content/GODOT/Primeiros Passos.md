@@ -32,9 +32,10 @@ Todas as cenas do jogo serão reunidas na árvore de cenas, onde cada ramo será
 **Nós emitem sinais quando certos eventos ocorrem**, que podem ser usados para fazer com que **nós se comuniquem** de forma simples
 Por exemplo, um botão emite um sinal ao ser pressionado. Você pode criar um código para ser executado ao receber esse evento de botão pressionado (como começar o jogo ou abrir um menu)
 Sinais também podem indicar colisão de objetos, a entrada do objeto em uma área ou algo personalizado de acordo com a sua necessidade
-
-Continuar: https://docs.godotengine.org/pt-br/4.x/getting_started/introduction/first_look_at_the_editor.html
 # Primeiro projeto
+Assim que abrir a GODOT a primeira tela que irá aparecer é o **Gerenciador de Projetos** e por padrão ele vai estar na aba **"Projetos"**
+- Se tiver em outro idioma, você pode acessar **"Settings"** do lado superior direito e trocar para português
+## Criando um novo projeto
 - Clicar em **`+ Criar`**
 - Colocar o **nome do projeto** (ele já atualiza o `Caminho do Projeto` automaticamente)
 - Definir o **`Renderizador`**
@@ -47,8 +48,22 @@ Continuar: https://docs.godotengine.org/pt-br/4.x/getting_started/introduction/f
 
 - Clicar em **`Criar`**
   ![CriandoNovoProjeto.png](../imagens/GODOT/CriandoNovoProjeto.png)
-
-- Ao criar, basicamente teremos algumas **áreas importantes** na GODOT:
+## O editor da GODOT
+- Ao criar, basicamente teremos algumas **áreas importantes**:
 	Ver também: https://docs.godotengine.org/pt-br/4.x/getting_started/introduction/first_look_at_the_editor.html#first-look-at-godot-s-editor
 	
 	![EditorGodot.png](../imagens/GODOT/EditorGodot.png)
+
+- Todas as cenas abertas (em azul) são exibidas como abas. Para adicionar uma nova cena basta clicar no botão de **+** ao lado
+	- Na extrema direita dessa aba é possível mudar para o modo sem distrações (oculta as abas da interface)
+- No topo da viewport temos a barra de ferramentas / toolbar (ambos em laranja) com as ferramentas para mover, redimensionar, travar a cena, etc (essa barra muda de acordo com o contexto e nó)
+- As abas podem ser personalizadas!
+- Por padrão, o painel inferior fica minimizado mas ao clicar em alguma das opções desse painel ele expande verticalmente
+- Nos **botões de troca de área de trabalho** podemos ver **as 5 telas principais da GODOT**:
+	- **2D**: será usada para **todos os tipos de jogos**
+	- **3D**: é possível trabalhar com malhas (meshes), luzes e criação de leveis para jogos 3D
+	- **Script**: é um editor de código completo com depurador, preenchimento automático avançado e referência de código integrada.
+	- **Jogo**: é onde o projeto (seu jogo) vai aparecer quando ele for executado. 
+		- Lembre-se que todas **as alterações aqui não ficam salvas** quando o jogo parar de rodar!
+	- **Biblioteca de recursos**: é a biblioteca de recursos open source como assets, scripts, etc
+- **Documentação**: é possível acessar a documentação da Godot clicando em "Ajuda" no menu principal, pressionando F1 (ou Fn+F1), clicando com o Ctrl segurado no nome de uma classe, função, ou em variáveis embutidas no editor de código, etc
