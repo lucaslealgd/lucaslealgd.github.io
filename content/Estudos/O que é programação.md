@@ -4,7 +4,7 @@ Aqui eu vou começar apresentando muita coisa nova e provavelmente você não va
 ### Desenhe um círculo
 Ao pensar em desenhar um círculo:
 **Pra gente**: desenhe um círculo
-**Pro computado**r: desenho um círculo da cor azul água com o centro em 0,0 com raio de 60 pixels
+**Pro computador**: desenho um círculo da cor azul água com o centro em 0,0 com raio de 60 pixels
 - Só que ao invés de falar essas palavras, vamos passar **comandos**
 - **Tudo importa**: parênteses, pontos, vírgulas, letras maiúsculas e minúsculas, etc
 - Por exemplo, em GDScript:
@@ -152,6 +152,6 @@ Antes de você seguir, é importante que você entenda:
 - Escrever um código é **conversar com o computador** na linguagem que ele entende
 - A **documentação** vai ser a sua maior aliada nessa jornada! Sempre procure por ela!
 - **Variáveis** são usadas no seu código para guardar informações que poderão ser usadas e alteradas
-- Erros vão acontecer! As **mensagens de erro** vão te ajudar a resolver e a melhorar como programados!
+- Erros vão acontecer! As **mensagens de erro** vão te ajudar a resolver e a melhorar como programador!
 Você pode continuar estudando outros assuntos como:
 - [[Funções e Bibliotecas]]
