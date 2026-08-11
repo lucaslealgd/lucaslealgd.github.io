@@ -96,8 +96,6 @@ E agora surge a pergunta...
 > Hoje a vida é uma prova com consulta, você não precisa lembrar de tudo!
 	- [[Como transformar suas anotações de leitura em ideias interconectadas - Jardim digital para leitores (Julia Ledra)]]
 
-
-
 ## Como melhorar seu uso da internet
 Eu sei que você se sente culpado depois de ficar 3 horas scrollando o seu celular e sentir que nem sequer aproveitou esse tempo, não teve 1 risada, sequer um conteúdo que te deixou feliz. Apenas raiva, fomo e ansiedade
 E eu sei disso pq era o que acontecia comigo
