@@ -1,3 +1,5 @@
+- Artigo final: [Como criar um Jardim Digital mudou minha forma de consumir conteúdo](https://www.linkedin.com/pulse/como-criar-um-jardim-digital-mudou-minha-forma-de-consumir-lucas-leal-u0dtf)
+
 Recentemente eu estava passando vídeos no tiktok quando eu me deparei com 2 deles que me fizeram pensar quase que 1 semana inteira. 
 O primeiro fazia uma pergunta simples: "**você tem algum hobby que não seja consumir?**". E aqui eu não digo apenas comprar coisas, mas assistir dezenas de vídeos, ficar rolando o feed ou até mesmo ler livros de forma compulsiva...tudo isso também é consumir
 Já no segundo a criadora se questionava **como poderia se tornar mais interessante** e a conclusão era que, **pra isso, ela deveria ser mais interessada**.
@@ -24,7 +26,7 @@ Por exemplo, depois dessa primeira nota eu fui ver um outro vídeo e acabei cria
 Com o tempo você vai começar a perceber que vários dos seus interesses estão **super conectados** e o mais legal de tudo: você vai começar a **criar referências e construir repertório** e consequentemente se tornar uma pessoa mais interessante (não é super legal conversar com alguém que consegue falar sobre os mais variados temas?)
 Diferente de um blog que acontece em ordem cronológica, **no jardim o ponto principal é a conexão entre as publicações**
 
-Segundo Tiago Forte, um aspecto importante da **criatividade: ela é sempre uma montagem de partes já existentes**. Quando você já tem várias conexões entre suas informações criar algo a partir disso vai se tornando cada vez mais fácil à medida que você adiciona mais referências! 
+Segundo Tiago Forte, um aspecto importante da **criatividade é que ela é sempre uma montagem de partes já existentes**. Quando você já tem várias conexões entre suas informações criar algo a partir disso vai se tornando cada vez mais fácil à medida que você adiciona mais referências! 
 
 E então vai ficar natural pra você revisitar assuntos que você tinha colocado, abrir novamente a semente para adicionar novas coisas (talvez até discordar de um pensamento de 6 meses atrás) e com o tempo essa semente vai ganhando forma e virando um **broto 🌿**
 
@@ -34,11 +36,10 @@ E esse é outro ponto importante: aqui as suas ideias não estão finalizadas, e
 
 E isso pode evoluir tanto que talvez depois de semanas, meses ou até anos você perceba que acumulou tantas reflexões e conexões sobre um determinado assunto que dali irá nascer uma coisa nova e completamente sua: um vídeo, um projeto, uma publicação ou até um artigo como esse... você agora tem uma **árvore 🌲**
 
-E, como você deve imaginar, a **minha árvore** que começou desse primeiro vídeo do tiktok e agora reune várias outras notas que você pode consultar nessa lista de tags do meu jardim [Tag jardimdigital](https://lucaslealgd.github.io/tags/jardimdigital) virou exatamente esse artigo que você está lendo!
+E, como você deve imaginar, a **minha árvore** que começou desse primeiro vídeo do tiktok e agora reúne várias outras notas que você pode consultar nessa lista de tags do meu jardim [Tag jardimdigital](https://lucaslealgd.github.io/tags/jardimdigital) virou exatamente esse artigo que você está lendo!
 
 MAS NEM TODA SEMENTE PRECISA VIRAR ÁRVORE e você não deve se cobrar por isso! O Jardim Digital **não é feito para ser mais uma demanda na sua vida, mais uma fonte de busca incessante pela produtividade**. Ele deve ser **um lugar confortável e amigável** para você desenvolver sua criatividade e conseguir guardar tudo que te faz bem!
 E deixando bem claro: não é sobre transformar cada vídeo que você assiste em um artigo no LinkedIn. É só sobre sair um pouco do piloto automático e voltar a estar presente naquilo que você escolheu consumir (mesmo que a única coisa que você leve dali seja uma risada ou uma fofoca pra contar pros amigos)
-
 # Por que o jardim digital funcionou pra mim?
 A primeira mudança que eu percebi na minha forma de consumir conteúdo foi que **fazer anotações me obrigou a desacelerar**, me fez parar nem que seja por alguns segundos e **refletir sobre aquilo ao invés de apenas salvar**.
 
@@ -57,3 +58,53 @@ Sobre como essas notas devem evoluir, foi algo que no início eu achei complicad
 1. **Pense como se tivesse separando algo pra mandar pra uma outra pessoa** (**você quer escrever algo legal mas não quer perder tempo escrevendo**). 
 2. Pensa também **como você gostaria de receber algo** (você **não quer gastar tanto tempo lendo**). 
 3. **Agora junta esses dois**: você vai ***escrever pro seu eu do futuro*** (**o quão legal o seu eu do presente vai ser com seu eu do futuro?**) 
+# Algumas dicas para você criar o seu próprio Jardim Digital
+Quando eu comecei a pensar no meu jardim eu queria algo perfeito que fosse super organizado e que já tivesse praticamente pronto, só que eu fui entendendo que **o importante é começar e com o tempo você vai adaptando ao que mais funciona pra você**!
+Atualmente eu estou usando o **Obsidian** pra fazer o meu jardim e usei o Quartz para colocá-lo online, mas você pode testar o **Sublime**, **Capacities** ou qualquer outra coisa que funcione pra você!
+
+Outra coisa que me ajudou nesse processo foi **ter um grupo no whatsapp comigo mesmo**, onde sempre que eu vejo algo legal eu mando nesse grupo com uma pequena frase explicando sobre. Depois eu sento no meu computador e transformo isso em uma semente.
+**Faça a captura ser ridiculamente fácil!** Esse é apenas o primeiro passo então deve exigir quase nenhum esforço!
+
+Não tente criar notas gigantes e super complexas (o que eu fazia muito e ainda faço, estou tentando melhorar), pense que:
+
+> **O raciocínio é o da atomicidade**. Quando cada vídeo/livro/artigo **tem sua própria nota**, cada um pode crescer no seu ritmo (um pode ficar semente pra sempre, outro vira árvore), e principalmente: cada um pode se conectar a **vários** temas ao mesmo tempo. É aí que o jardim ganha vida. - Como transformar suas anotações de leitura em ideias interconectadas | Jardim digital para leitores - Julia Ledra
+
+Sempre que estiver escrevendo sobre algo e lembrar de outra nota, coloque uma **referência** entre elas. Além disso **use tags para te ajudar a identificar tópicos importantes naquele conteúdo** como #jardimDigital.
+Só que evite tentar pensar em um sistema de tags perfeito antes mesmo de começar a usá-las, isso vai te fazer perder muito tempo e será completamente inútil. Deixe que você sinta que precisa adicionar uma tag por entender que aquele tema está relacionado com um assunto do seu interesse
+Lembre-se que **A TAG É TOTALMENTE PESSOAL!** E em algumas ferramentas ela ajuda a ver o relacionamento entre as informações e até filtrar por elas.
+
+**⚠️ Não seja um acumulador de informações! ⚠️** Nem tudo precisa virar uma nota e se a nota não fizer sentido depois de um tempo, apague-a.
+
+**Se convide pra conversa!** Depois de criar a nota e anotar alguns pontos do autor, coloque também os seus pensamentos, escreva o que achou e traga suas vivências. É o **seu jardim digital**, então nada mais justo que ele tenha a sua cara.
+Aproveite também para **buscar contrapontos daquilo que você tá lendo**, veja outras perspectivas e escute outros lados. **O algoritmo fortalece tanto o nosso viés de confirmação que buscar outras fontes pode abrir um caminho totalmente novo de conhecimento!**
+
+Ah, e **o seu jardim não precisa ser público!** Eu escolhi deixar o meu online porque gosto da ideia de aprender em público, mas ele pode tranquilamente existir só no seu computador.
+> **Ele não precisa ter uma utilidade, não precisa ser performático ou algo pra ser mostrado. Pode ser apenas um lugar seu onde você se sinta bem em estar ali e ver suas ideias florescendo** -   
+criando um jardim digital para fugir do brainrot .𖥔 ݁ ˖ - Maia Strzygowski
+
+**Por fim, toda vez que voltar em uma nota, deixe ela um pouco melhor!**
+> A regra geral é que, **toda vez que “tocar” numa nota, você deve torná-la um pouco mais “descobrível” para o seu eu do futuro¹** – acrescentando destaques, um título, uma estrutura de tópicos ou comentários. É a ideia básica de que você deve sempre deixar a nota melhor do que quando a encontrou. - Criando um Segundo Cérebro - Tiago Forte
+# Se eu fosse você, começaria agora mesmo
+O Jardim Digital vai mudar a forma como você se relaciona com o conteúdo pois **só de escrever lá você está fazendo algo além de consumir, você está cultivando suas ideias**.
+
+Você vai perceber que aos poucos vai se **tornando uma pessoa mais interessante** pois esses seus interesses que você está semeando aqui serão assuntos de uma conversa, virarão vídeos pras redes sociais ou até um novo projeto.
+
+Como diria Julia Ledra, no vídeo "Como transformar suas anotações de leitura em ideias interconectadas | Jardim digital para leitores":
+> Hoje a vida é uma prova com consulta, você não precisa lembrar de tudo!
+
+Eu só adicionaria uma única observação: só que a consulta só vai ser útil se você **organizá-la de uma forma que seja fácil de acionar**
+
+E pra fechar, eu só queria deixar uma citação que também está no meu jardim e te convidar a começar o seu agora mesmo:
+> [!Citação:]
+> Tudo que vale a pena fazer, vale a pena fazer pela metade. Tentar e falhar, fazer apenas o mínimo ou conseguir menos do que você queria quase nunca vai deixar você em uma situação pior do que se não tivesse feito nada. - u/SKIKS no reddit
+
+---
+Links e referências:
+Meu jardim digital: https://lucaslealgd.github.io/
+Minha nota sobre jardim digital: https://lucaslealgd.github.io/estudos/o-que-%C3%A9-um-jardim-digital
+Livro: Criando um Segundo Cérebro - Tiago Forte
+Vídeos:
+- https://www.tiktok.com/@maiastrz/video/7606800763255573780?_r=1&_t=ZS-97qfZU4fqRs
+- https://www.youtube.com/watch?v=0tY7Z53QJo8
+- https://www.youtube.com/watch?v=O9Prnl_IuMs
+- https://www.youtube.com/watch?v=wiQe4-ITKzc
