@@ -9,23 +9,28 @@ O que é GODOT?
 	- É só extrair o zip e executar o arquivo **`.exe`**
 	- Tem 2 versões, a **normal (que geralmente usamos)** e a **`_console`** (abre um terminal junto) 
 # Principais conceitos
+Antes de falar de qualquer conceito de programação, vamos primeiro entender melhor sobre a GODOT em si e criar o nosso primeiro personagem para então usarmos a programação nele de forma mais visual.
+
 > Em Godot, um jogo é uma **árvore** de **nós** que você agrupa em **cenas**. Você pode conectar esses nós para que eles possam se comunicar usando **sinais**. - [Visão geral dos principais conceitos do Godot - Documentação Oficial](https://docs.godotengine.org/pt-br/4.x/getting_started/introduction/key_concepts_overview.html#:~:text=Em%20Godot%2C%20um%20jogo%20%C3%A9%20uma%20%C3%A1rvore%20de%20n%C3%B3s%20que%20voc%C3%AA%20agrupa%20em%20cenas.%20Voc%C3%AA%20pode%20conectar%20esses%20n%C3%B3s%20para%20que%20eles%20possam%20se%20comunicar%20usando%20sinais.)
 
 ![nó, árvore e cena](../imagens/GODOT/noArvoreCena.png)
 ## Nós
-São os menores blocos de construção do jogo, cada um com sua função específica
-Ex: 
+São os menores blocos de construção do jogo, cada um com sua função específica (é como se fosse cada tijolinho que a gnt vai usar pra montar nosso game)
+Só que os nós podem ter outros nós dentro deles, como por exemplo na imagem acima: 
 - `CharacterBody2D`: representa um personagem que pode se movimentar e colidir.
+	- é o **nó raiz** e todos esses outros nós vão estar "dentro" dele e serão usados para adicionar propriedades a esse nó (como área de colisão, imagem e câmera)
 - `CollisionShape2D`: define a área de colisão, permitindo que colida com paredes e objetos
 - `Sprite2D`: exibe uma imagem, podendo ser a aparência do personagem por exemplo
 - `Camera2D`: funciona como a câmera do jogo (acompanha o personagem)
-Os nós podem ser *organizados em estruturas de pai e filhos* chamados de **árvore**
-Ao *salvar uma árvore de nós como uma **cena***, ela é exibida como **um único nó** com a estrutura interna oculta no editor
+Ao fazermos isso estamos *organizando os nós em estruturas de pai e filhos* chamados de **árvore**
+Ao *salvar uma árvore de nós como uma **cena***, ela é exibida como **um único nó** com a estrutura interna oculta no editor (é como se essa árvore virasse um outro tijolinho "mais potente" agora com um objetivo específico)
 A maioria das coisas em GODOT será feita com os nós (já existem nós prontos para quase tudo que vamos precisar!)
+Observe que todos os nós citados acima terminam com `2D` e como vocês devem imaginar isso acontece pois estamos falando de cenas 2D, quando forem cenas 3D os nós terminam como `3D`
 ## Cenas
 Na GODOT você irá construir **cenas reutilizáveis**, que podem ser um personagem, uma arma, um menu de interface, uma casa ou até um nível inteiro
 **A árvore de nós irá formar uma cena**, que ao ser salva ela será registrada como um **arquivo `.tscn`** e poderá ser reutilizada em qualquer parte do seu jogo
 É comum termos **cenas dentro de outras cenas** (como um personagem dentro de um nível do jogo)
+- Chamamos de "**aninhar cenas**"
 ## Árvore da cena
 Todas as cenas do jogo serão reunidas na árvore de cenas, onde cada ramo será uma cena diferente. **O seu jogo nada mais é que uma ligação entre várias cenas**
 ## Sinais
@@ -54,7 +59,7 @@ Assim que abrir a GODOT a primeira tela que irá aparecer é o **Gerenciador de 
 	
 	![EditorGodot.png](../imagens/GODOT/EditorGodot.png)
 
-- Todas as cenas abertas (em azul) são exibidas como abas. Para adicionar uma nova cena basta clicar no botão de **+** ao lado
+- Todas as cenas abertas (em azul escuro) são exibidas como abas. Para adicionar uma nova cena basta clicar no botão de **+** ao lado
 	- Na extrema direita dessa aba é possível mudar para o modo sem distrações (oculta as abas da interface)
 - No topo da viewport temos a barra de ferramentas / toolbar (ambos em laranja) com as ferramentas para mover, redimensionar, travar a cena, etc (essa barra muda de acordo com o contexto e nó)
 - As abas podem ser personalizadas!

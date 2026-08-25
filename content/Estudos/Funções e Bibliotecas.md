@@ -44,6 +44,7 @@ E o mais legal é que **a própria linguagem já disponibiliza várias funções
 
 Para escrever uma função em Python você começa fazendo ***def*** enquanto em GDScript você usa ***func***, em ambos **seguido pelo nome da função, parênteses e dois pontos**. Dentro do parênteses podem haver **parâmetros** se necessário, que basicamente são nomes que a função usa para receber informações como dinheiro_jogador e preco_item
 A **linha seguinte a definição da função sempre vai começar com um Tab** (espaço no início da linha, que chamamos de **indentação**), isso vai indicar pro código o que está dentro da sua função
+
 ## Bibliotecas
 Outra questão fundamental na programação é que você não precisa reinventar a roda, **muita coisa que você vai usar já está pronta**
 Outros programadores muito legais já criaram **pacotes de códigos** que irão facilitar muito a sua vida e te poupar muito tempo chamado ***bibliotecas***
