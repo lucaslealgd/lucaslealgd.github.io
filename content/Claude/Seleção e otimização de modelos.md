@@ -138,87 +138,87 @@ Algumas coisas afetam esse preço e viram multiplicadores no valor (podendo aume
 > b) Extrair os valores com o modelo e somar no código (ou dar uma tool de cálculo)
 > c) Aumentar `max_tokens`
 > d) Reduzir `temperature` para 0
->
-> > [!success]- Resposta
-> > **b**. O modelo prevê texto, não executa aritmética; erra com confiança. Regra determinística vai pro código. Opus e temperature reduzem, não eliminam.
+
+> [!success]- Resposta
+> **b**. O modelo prevê texto, não executa aritmética; erra com confiança. Regra determinística vai pro código. Opus e temperature reduzem, não eliminam.
 
 > [!question] 2. Um classificador de e-mails devolve categorias diferentes para o mesmo e-mail em execuções repetidas. Nenhum parâmetro de amostragem foi definido. O que ajustar primeiro? (selecione 1)
 > a) `top_k=1` e `temperature=0` juntos
 > b) `temperature=0`
 > c) Extended thinking
 > d) Trocar para Haiku
->
-> > [!success]- Resposta
-> > **b**. Padrão é `temperature=1` (criativo). Tarefa com resposta certa → 0. Não se combina `top_p`/`top_k` com temperature; thinking não afeta consistência.
+
+> [!success]- Resposta
+> **b**. Padrão é `temperature=1` (criativo). Tarefa com resposta certa → 0. Não se combina `top_p`/`top_k` com temperature; thinking não afeta consistência.
 
 > [!question] 3. Mesmo com `temperature=0`, duas chamadas idênticas retornaram textos ligeiramente diferentes. O que isso indica? (selecione 1)
 > a) Bug na API; abrir ticket
 > b) Comportamento esperado: 0 é quase determinístico, não totalmente; determinismo real só no código ou cacheando a resposta
 > c) O cache de prompt está quebrado
 > d) O modelo foi atualizado silenciosamente
->
-> > [!success]- Resposta
-> > **b**. Detalhes de hardware e paralelismo variam entre chamadas. Se precisa do mesmo resultado sempre, não dependa do modelo.
+
+> [!success]- Resposta
+> **b**. Detalhes de hardware e paralelismo variam entre chamadas. Se precisa do mesmo resultado sempre, não dependa do modelo.
 
 > [!question] 4. Uma aplicação envia 120 mil tokens de contexto por chamada e reclama de latência alta antes do primeiro token. O que reduz esse tempo específico? (selecione 1)
 > a) Streaming
 > b) Prompt caching no prefixo repetido, ou reduzir o input
 > c) Reduzir `max_tokens`
 > d) Aumentar `temperature`
->
-> > [!success]- Resposta
-> > **b**. TTFT cresce com o input; cache evita reprocessar. Streaming só mostra antes; `max_tokens` afeta o tempo total, não o TTFT.
+
+> [!success]- Resposta
+> **b**. TTFT cresce com o input; cache evita reprocessar. Streaming só mostra antes; `max_tokens` afeta o tempo total, não o TTFT.
 
 > [!question] 5. Uma instrução crítica no meio de um prompt de 150 mil tokens está sendo ignorada. O que fazer? (selecione 1)
 > a) Aumentar `budget_tokens`
 > b) Mover a instrução para o `system` (início) e, se preciso, repetir no fim
 > c) Usar Opus
 > d) Trocar para `top_p`
->
-> > [!success]- Resposta
-> > **b**. Lost in the middle: início e fim pesam mais. Posição da instrução, não modelo ou parâmetro.
+
+> [!success]- Resposta
+> **b**. Lost in the middle: início e fim pesam mais. Posição da instrução, não modelo ou parâmetro.
 
 > [!question] 6. Quais afirmações sobre extended thinking estão corretas? (selecione 2)
 > a) Os tokens de thinking são cobrados como output
 > b) `budget_tokens` deve ser maior que `max_tokens`
 > c) Com thinking ligado, `temperature` deve ser 1 e prefill não funciona
 > d) Melhora tarefas simples de classificação sem custo extra
->
-> > [!success]- Resposta
-> > **a, c**. `budget_tokens` < `max_tokens` (b errada). Em tarefa simples só encarece (d errada).
+
+> [!success]- Resposta
+> **a, c**. `budget_tokens` < `max_tokens` (b errada). Em tarefa simples só encarece (d errada).
 
 > [!question] 7. Uma empresa quer que o modelo responda no "tom da marca" e conheça 5 mil documentos internos. Um consultor sugere fine-tuning. Qual a avaliação correta? (selecione 1)
 > a) Fine-tuning resolve os dois
 > b) A API do Claude não oferece fine-tuning; tom vai no prompt (com exemplos) e conhecimento vai por RAG
 > c) Fine-tuning para o tom e prompt para os documentos
 > d) Opus já sabe o tom e os documentos
->
-> > [!success]- Resposta
-> > **b**. Fine-tuning não está na API e não adiciona conhecimento confiável. Prompt para estilo, RAG para base grande.
+
+> [!success]- Resposta
+> **b**. Fine-tuning não está na API e não adiciona conhecimento confiável. Prompt para estilo, RAG para base grande.
 
 > [!question] 8. Um app precisa de OCR de faturas com classificação simples, milhares por hora, custo mínimo. Qual modelo começar a testar? (selecione 1)
 > a) Opus, por causa da vision
 > b) Haiku — todos têm vision; o que varia é qualidade, velocidade e preço
 > c) Sonnet com extended thinking
 > d) Fable
->
-> > [!success]- Resposta
-> > **b**. Vision é comum a todas as faixas. Volume alto + tarefa simples + custo → Haiku, validado com eval.
+
+> [!success]- Resposta
+> **b**. Vision é comum a todas as faixas. Volume alto + tarefa simples + custo → Haiku, validado com eval.
 
 > [!question] 9. Uma aplicação em Sonnet custa caro. O log mostra respostas de 3 mil tokens com explicações longas, sendo que o sistema só usa um JSON de 200 tokens. Qual a ação de maior impacto? (selecione 1)
 > a) Prompt caching
 > b) Reduzir output: structured output e `max_tokens` ajustado — output custa ~5× o input
 > c) Batch API
 > d) Aumentar `temperature`
->
-> > [!success]- Resposta
-> > **b**. O desperdício está no output, o token mais caro. Cache e Batch não mexem nisso.
+
+> [!success]- Resposta
+> **b**. O desperdício está no output, o token mais caro. Cache e Batch não mexem nisso.
 
 > [!question] 10. Com preços de US$ 3 (input) e US$ 15 (output) por milhão de tokens, uma chamada com 10 mil tokens de input e 1 mil de output custa quanto? E a mesma chamada via Batch? (selecione 1)
 > a) US$ 0,045 e US$ 0,0225
 > b) US$ 0,030 e US$ 0,015
 > c) US$ 0,045 e US$ 0,045
 > d) US$ 0,018 e US$ 0,009
->
-> > [!success]- Resposta
-> > **a**. Input: 10.000 × 3/1.000.000 = 0,030; output: 1.000 × 15/1.000.000 = 0,015; total 0,045. Batch = 50% → 0,0225.
+
+> [!success]- Resposta
+> **a**. Input: 10.000 × 3/1.000.000 = 0,030; output: 1.000 × 15/1.000.000 = 0,015; total 0,045. Batch = 50% → 0,0225.

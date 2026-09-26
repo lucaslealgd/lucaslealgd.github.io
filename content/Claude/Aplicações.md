@@ -123,87 +123,87 @@ Então a ideia é escolher o primeiro da lista que resolver o problema:
 > b) Streaming + manual no `system` com prompt caching
 > c) RAG com índice vetorial + `temperature=1`
 > d) Chamada síncrona sem streaming + Files API
->
-> > [!success]- Resposta
-> > **b**. Tempo real → streaming; documento que cabe na janela e raramente muda → prompt + cache. RAG é para base que não cabe ou muda muito.
+
+> [!success]- Resposta
+> **b**. Tempo real → streaming; documento que cabe na janela e raramente muda → prompt + cache. RAG é para base que não cabe ou muda muito.
 
 > [!question] 2. A equipe trocou o system prompt e não sabe se a qualidade melhorou ou piorou. O que faltou no ciclo de vida? (selecione 1)
 > a) Monitoramento de custo via `usage`
 > b) Um eval set com entradas e saídas esperadas para comparar versões
 > c) Workspaces separados por ambiente
 > d) Usar alias do modelo em vez de ID com data
->
-> > [!success]- Resposta
-> > **b**. Sem conjunto de avaliação, mudança de prompt ou modelo é chute. Eval set é a fase 2 e volta em toda troca.
+
+> [!success]- Resposta
+> **b**. Sem conjunto de avaliação, mudança de prompt ou modelo é chute. Eval set é a fase 2 e volta em toda troca.
 
 > [!question] 3. Uma aplicação em produção passou a se comportar diferente sem nenhum deploy. O `model` na config é `claude-sonnet-4-5`. Qual a causa provável e a correção? (selecione 1)
 > a) Rate limit mudou; aumentar o tier
 > b) O alias passou a apontar para uma versão nova; fixar o ID com data
 > c) O cache expirou; usar `ttl: "1h"`
 > d) A chave de API foi rotacionada
->
-> > [!success]- Resposta
-> > **b**. Alias segue a versão mais recente. Produção usa ID com data e migra de forma planejada, com eval.
+
+> [!success]- Resposta
+> **b**. Alias segue a versão mais recente. Produção usa ID com data e migra de forma planejada, com eval.
 
 > [!question] 4. Dois times da mesma organização usam a API; o job noturno de um esgota o rate limit e derruba o chatbot do outro. O que fazer? (selecione 1)
 > a) Aumentar `max_retries` no chatbot
 > b) Separar em Workspaces, cada um com rate limit e spend limit próprios
 > c) Compartilhar a mesma chave com prefixos diferentes
 > d) Mover o chatbot para streaming
->
-> > [!success]- Resposta
-> > **b**. Workspaces isolam chave, limite e uso. Retry no chatbot não cria capacidade; streaming não afeta rate limit.
+
+> [!success]- Resposta
+> **b**. Workspaces isolam chave, limite e uso. Retry no chatbot não cria capacidade; streaming não afeta rate limit.
 
 > [!question] 5. Uma aplicação precisa gerar um rascunho de contrato, revisá-lo contra uma checklist jurídica e depois traduzi-lo. Os passos são fixos. Qual padrão? (selecione 1)
 > a) Agente autônomo com tools
 > b) Prompt chaining, com validação entre os passos
 > c) Parallelization com votação
 > d) Orchestrator-workers
->
-> > [!success]- Resposta
-> > **b**. Passos previsíveis e sequenciais, saída de um é entrada do outro → chaining. Agente só quando o modelo precisa decidir os passos.
+
+> [!success]- Resposta
+> **b**. Passos previsíveis e sequenciais, saída de um é entrada do outro → chaining. Agente só quando o modelo precisa decidir os passos.
 
 > [!question] 6. Um suporte recebe perguntas simples (horário, endereço), perguntas técnicas sobre produto e reclamações que devem ir para humano. Um único prompt está genérico demais. Qual padrão? (selecione 1)
 > a) Routing: uma chamada barata classifica e encaminha para o tratamento certo
 > b) Evaluator-optimizer
 > c) Parallelization seccionada
 > d) Aumentar o `system` com todos os casos
->
-> > [!success]- Resposta
-> > **a**. Entradas heterogêneas → roteamento, com modelo barato na classificação e prompt específico em cada rota.
+
+> [!success]- Resposta
+> **a**. Entradas heterogêneas → roteamento, com modelo barato na classificação e prompt específico em cada rota.
 
 > [!question] 7. Após um retry por timeout, o cliente recebeu dois e-mails de confirmação de pedido. O que corrige de forma adequada? (selecione 1)
 > a) Remover o retry
 > b) `temperature=0` para o modelo responder igual
 > c) Chave de idempotência na ação de envio, checando se já foi executada antes de repetir
 > d) Trocar para Batch API
->
-> > [!success]- Resposta
-> > **c**. A chamada ao modelo é segura de retentar; a ação com efeito colateral não. Idempotência se constrói no código; `temperature` não garante nada.
+
+> [!success]- Resposta
+> **c**. A chamada ao modelo é segura de retentar; a ação com efeito colateral não. Idempotência se constrói no código; `temperature` não garante nada.
 
 > [!question] 8. O custo mensal da API dobrou e ninguém sabe qual fluxo causou. O que faltou? (selecione 1)
 > a) Prompt caching
 > b) Log estruturado por chamada com `usage` e métricas agregadas por fluxo
 > c) Modelo menor
 > d) Streaming
->
-> > [!success]- Resposta
-> > **b**. Sem observabilidade não se sabe onde o dinheiro vai. Cache e modelo menor são remédios; o diagnóstico vem antes.
+
+> [!success]- Resposta
+> **b**. Sem observabilidade não se sabe onde o dinheiro vai. Cache e modelo menor são remédios; o diagnóstico vem antes.
 
 > [!question] 9. Uma aplicação valida CPF e calcula o total de uma nota fiscal pedindo ao modelo que faça isso no prompt. Qual a crítica de design? (selecione 1)
 > a) Deveria usar Opus para cálculos
 > b) Lógica determinística deve ficar no código; o modelo fica com o que exige linguagem ou julgamento
 > c) Deveria usar RAG
 > d) Deveria usar `stop_sequences`
->
-> > [!success]- Resposta
-> > **b**. Regra clara → código: mais barato e sem erro de geração. Modelo para extração e interpretação, não para aritmética.
+
+> [!success]- Resposta
+> **b**. Regra clara → código: mais barato e sem erro de geração. Modelo para extração e interpretação, não para aritmética.
 
 > [!question] 10. Um pipeline noturno de 20 mil documentos está falhando com 429 e 529 em sequência. Quais mudanças são adequadas? (selecione 2)
 > a) Colocar as requisições numa fila consumida no ritmo do rate limit, ou migrar para Batch
 > b) Retentar imediatamente em loop
 > c) Fallback para um modelo menor quando o principal está em 529
 > d) Aumentar `max_tokens`
->
-> > [!success]- Resposta
-> > **a, c**. Fila/Batch desacopla do limite; fallback mantém o pipeline andando na sobrecarga. Retry em loop piora; `max_tokens` não tem relação.
+
+> [!success]- Resposta
+> **a, c**. Fila/Batch desacopla do limite; fallback mantém o pipeline andando na sobrecarga. Retry em loop piora; `max_tokens` não tem relação.
