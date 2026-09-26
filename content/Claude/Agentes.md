@@ -186,16 +186,16 @@ O ideal é começar sem framework e depois ver se vai ser necessário
 -----
 ## Checkpoint: Agentes
 
-> [!question]- 1. Um agent loop guarda no histórico apenas `resp.content[0].text` de cada resposta do modelo. Na primeira vez que o modelo pede uma tool, a chamada seguinte retorna 400. Qual a causa? (selecione 1)
+> [!question] 1. Um agent loop guarda no histórico apenas `resp.content[0].text` de cada resposta do modelo. Na primeira vez que o modelo pede uma tool, a chamada seguinte retorna 400. Qual a causa? (selecione 1)
 > a) `max_tokens` insuficiente para o `tool_result`
 > b) O bloco `tool_use` foi descartado; o `tool_result` referencia um `tool_use_id` que não existe no histórico
 > c) `tool_result` deveria ir com `role: "assistant"`
 > d) A tool não está na lista de `tools`
 >
-> [!success]- Resposta
-> **b**. O `content` do assistant vai intacto. Sem o bloco `tool_use`, o `tool_result` fica órfão. `tool_result` é sempre `user`.
+> > [!success]- Resposta
+> > **b**. O `content` do assistant vai intacto. Sem o bloco `tool_use`, o `tool_result` fica órfão. `tool_result` é sempre `user`.
 
-> [!question]- 2. Durante o loop, a tool `buscar_pedido` lança exceção por timeout no banco. Qual o tratamento correto? (selecione 1)
+> [!question] 2. Durante o loop, a tool `buscar_pedido` lança exceção por timeout no banco. Qual o tratamento correto? (selecione 1)
 > a) Encerrar o loop e retornar erro ao usuário
 > b) Devolver `tool_result` com `is_error: true` e a mensagem, deixando o modelo decidir o próximo passo
 > c) Retentar a chamada à API com backoff
@@ -204,7 +204,7 @@ O ideal é começar sem framework e depois ver se vai ser necessário
 > > [!success]- Resposta
 > > **b**. Erro na tool não é erro na API. O modelo lê o erro e decide (retentar, outra tool, avisar). Backoff é para 429/5xx da API.
 
-> [!question]- 3. Um agente de suporte às vezes entra em ciclo: chama a mesma tool com o mesmo input dezenas de vezes e a conta da API explode. Qual guardrail resolve? (selecione 1)
+> [!question] 3. Um agente de suporte às vezes entra em ciclo: chama a mesma tool com o mesmo input dezenas de vezes e a conta da API explode. Qual guardrail resolve? (selecione 1)
 > a) Escrever no `system` "não repita chamadas de tool"
 > b) Teto de iterações (ou de tokens/tempo) no código do loop
 > c) `temperature=0`
@@ -213,7 +213,7 @@ O ideal é começar sem framework e depois ver se vai ser necessário
 > > [!success]- Resposta
 > > **b**. Guardrail é código, não prompt: instrução pode ser ignorada; o teto segura sempre. `temperature` e modelo não garantem parada.
 
-> [!question]- 4. Uma aplicação gera um contrato, revisa contra checklist e traduz — sempre nessa ordem. O time propõe um agente com as três tools e deixar o modelo decidir. Qual a crítica? (selecione 1)
+> [!question] 4. Uma aplicação gera um contrato, revisa contra checklist e traduz — sempre nessa ordem. O time propõe um agente com as três tools e deixar o modelo decidir. Qual a crítica? (selecione 1)
 > a) Agente precisaria de Opus
 > b) Passos fixos e previsíveis → workflow (prompt chaining); agente é mais caro, menos previsível e mais difícil de testar sem ganho aqui
 > c) Faltaria `max_turns`
@@ -222,7 +222,7 @@ O ideal é começar sem framework e depois ver se vai ser necessário
 > > [!success]- Resposta
 > > **b**. Comece com o mais simples que resolve. Agente é para quando o caminho depende do que aparece no meio.
 
-> [!question]- 5. Um agente de pesquisa faz 30 buscas web; cada resultado tem ~15 mil tokens e fica no histórico. Nas últimas rodadas ele ignora instruções do `system` e repete buscas já feitas. Qual o diagnóstico e a correção mais adequada? (selecione 1)
+> [!question] 5. Um agente de pesquisa faz 30 buscas web; cada resultado tem ~15 mil tokens e fica no histórico. Nas últimas rodadas ele ignora instruções do `system` e repete buscas já feitas. Qual o diagnóstico e a correção mais adequada? (selecione 1)
 > a) Modelo fraco; subir para Opus
 > b) Context rot; limpar tool results antigos (context editing) ou mover as buscas para um subagente que devolve só o resumo
 > c) Aumentar `max_tokens`
@@ -231,7 +231,7 @@ O ideal é começar sem framework e depois ver se vai ser necessário
 > > [!success]- Resposta
 > > **b**. Janela cheia degrada antes de estourar. Correção é enxugar a janela, não aumentar limites (janela não é configurável; `max_tokens` é saída).
 
-> [!question]- 6. Um orquestrador despacha "pesquise concorrentes" para um subagente e recebe de volta 8 páginas de texto que não usa. O que faltou? (selecione 1)
+> [!question] 6. Um orquestrador despacha "pesquise concorrentes" para um subagente e recebe de volta 8 páginas de texto que não usa. O que faltou? (selecione 1)
 > a) Dar ao subagente acesso ao histórico do pai
 > b) Instrução autossuficiente, com objetivo, restrições e **formato de retorno** definido
 > c) Usar o mesmo modelo no pai e no filho
@@ -240,7 +240,7 @@ O ideal é começar sem framework e depois ver se vai ser necessário
 > > [!success]- Resposta
 > > **b**. Subagente não vê o histórico do pai (e não deve — é o ponto do isolamento de contexto). Tudo que ele precisa vai na chamada.
 
-> [!question]- 7. Qual a diferença entre *parallelization* (workflow) e *orchestrator-workers* (agente)? (selecione 1)
+> [!question] 7. Qual a diferença entre *parallelization* (workflow) e *orchestrator-workers* (agente)? (selecione 1)
 > a) Parallelization usa Haiku; orchestrator usa Opus
 > b) Em parallelization as tarefas paralelas são definidas no código antes de rodar; no orchestrator o modelo decide em tempo de execução quantos workers e com qual tarefa
 > c) Orchestrator é síncrono; parallelization é assíncrona
@@ -249,7 +249,7 @@ O ideal é começar sem framework e depois ver se vai ser necessário
 > > [!success]- Resposta
 > > **b**. Mesma distinção workflow vs agente aplicada ao paralelismo: quem define as partes, o código ou o modelo.
 
-> [!question]- 8. Um agente precisa lembrar, na sessão de amanhã, das preferências que o usuário informou hoje. Como? (selecione 1)
+> [!question] 8. Um agente precisa lembrar, na sessão de amanhã, das preferências que o usuário informou hoje. Como? (selecione 1)
 > a) Reenviar o histórico completo de hoje na primeira chamada de amanhã
 > b) Memória externa: o agente grava em arquivo/BD (ex.: memory tool, `CLAUDE.md`) e lê de volta quando precisa
 > c) Prompt caching com `ttl: "1h"`
@@ -258,7 +258,7 @@ O ideal é começar sem framework e depois ver se vai ser necessário
 > > [!success]- Resposta
 > > **b**. API é stateless e cache expira. Memória entre sessões é sempre externa, escrita e lida pelo seu código.
 
-> [!question]- 9. Com context editing (`clear_tool_uses`) ativado, quais afirmações estão corretas? (selecione 2)
+> [!question] 9. Com context editing (`clear_tool_uses`) ativado, quais afirmações estão corretas? (selecione 2)
 > a) A API apaga tool results antigos da entrada daquela chamada antes de o modelo ler
 > b) A lista `messages` local da aplicação é modificada pela API
 > c) O input cobrado e a atenção do modelo passam a considerar só o contexto enxuto
@@ -267,7 +267,7 @@ O ideal é começar sem framework e depois ver se vai ser necessário
 > > [!success]- Resposta
 > > **a, c**. Continua stateless: você reenvia tudo, ela filtra a cada chamada. Sua lista não muda (b) e o histórico continua sendo enviado (d).
 
-> [!question]- 10. Num agente com Agent SDK, você precisa garantir que `rm -rf` nunca seja executado, mesmo em `bypassPermissions`. O que fazer? (selecione 1)
+> [!question] 10. Num agente com Agent SDK, você precisa garantir que `rm -rf` nunca seja executado, mesmo em `bypassPermissions`. O que fazer? (selecione 1)
 > a) Escrever no `system_prompt` que comandos destrutivos são proibidos
 > b) Hook `PreToolUse` para Bash que devolve `deny` ao detectar o padrão (ou `disallowed_tools` com `Bash(rm *)`)
 > c) `permission_mode="plan"`
@@ -276,7 +276,7 @@ O ideal é começar sem framework e depois ver se vai ser necessário
 > > [!success]- Resposta
 > > **b**. Hook é código do SDK, roda sempre, independe do modelo obedecer. `disallowed_tools` e hooks são avaliados antes do `permission_mode`. `plan` não executa nada, não é o pedido.
 
-> [!question]- 11. `permission_mode="default"` e `allowed_tools=["Read", "Grep"]`. O modelo pede Read e depois Bash. O que acontece? (selecione 1)
+> [!question] 11. `permission_mode="default"` e `allowed_tools=["Read", "Grep"]`. O modelo pede Read e depois Bash. O que acontece? (selecione 1)
 > a) Ambas perguntam, pois o modo é `default`
 > b) Read executa direto; Bash cai na checagem de permissão
 > c) Bash é bloqueada, pois não está em `allowed_tools`
@@ -285,7 +285,7 @@ O ideal é começar sem framework e depois ver se vai ser necessário
 > > [!success]- Resposta
 > > **b**. `allowed_tools` pré-aprova; não remove tools. O que não está na lista segue o `permission_mode`. Bloquear de vez é `disallowed_tools`.
 
-> [!question]- 12. Um chat interno em que o usuário conversa com o agente por vários turnos e às vezes cancela a tarefa no meio. Qual API do SDK usar? (selecione 1)
+> [!question] 12. Um chat interno em que o usuário conversa com o agente por vários turnos e às vezes cancela a tarefa no meio. Qual API do SDK usar? (selecione 1)
 > a) `query()` chamado a cada mensagem do usuário
 > b) `ClaudeSDKClient` (streaming input), que mantém a sessão e suporta `interrupt()`
 > c) Batch API
@@ -294,7 +294,7 @@ O ideal é começar sem framework e depois ver se vai ser necessário
 > > [!success]- Resposta
 > > **b**. `query()` abre sessão nova a cada chamada e não interrompe. Conversa contínua e interrupção → `ClaudeSDKClient`.
 
-> [!question]- 13. Uma startup sem time de infraestrutura quer colocar um agente em produção rápido; não há restrição de dados. Qual hospedagem? (selecione 1)
+> [!question] 13. Uma startup sem time de infraestrutura quer colocar um agente em produção rápido; não há restrição de dados. Qual hospedagem? (selecione 1)
 > a) Agent SDK self-hosted em Kubernetes
 > b) Managed Agents (Anthropic-hosted): Anthropic roda loop, sandbox e log da sessão
 > c) Managed Agents com sandbox self-hosted
@@ -303,7 +303,7 @@ O ideal é começar sem framework e depois ver se vai ser necessário
 > > [!success]- Resposta
 > > **b**. Zero infra a operar. Self-hosted (ou sandbox próprio) é para compliance, dados internos ou rede fechada.
 
-> [!question]- 14. Um time vai construir um agente de refatoração de código e discute começar com LangGraph "para ser mais robusto". Qual a avaliação alinhada às práticas da Anthropic? (selecione 1)
+> [!question] 14. Um time vai construir um agente de refatoração de código e discute começar com LangGraph "para ser mais robusto". Qual a avaliação alinhada às práticas da Anthropic? (selecione 1)
 > a) Correto; framework é mais robusto que loop próprio
 > b) Começar sem framework: Agent SDK (loop, tools de arquivo, permissões e compactação prontos) ou loop simples; framework só se precisar de grafo complexo ou multi-provedor
 > c) Usar Managed Agents com LangGraph por cima
