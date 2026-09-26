@@ -192,8 +192,8 @@ O ideal é começar sem framework e depois ver se vai ser necessário
 > c) `tool_result` deveria ir com `role: "assistant"`
 > d) A tool não está na lista de `tools`
 >
-> > [!success]- Resposta
-> > **b**. O `content` do assistant vai intacto. Sem o bloco `tool_use`, o `tool_result` fica órfão. `tool_result` é sempre `user`.
+> [!success]- Resposta
+> **b**. O `content` do assistant vai intacto. Sem o bloco `tool_use`, o `tool_result` fica órfão. `tool_result` é sempre `user`.
 
 > [!question]- 2. Durante o loop, a tool `buscar_pedido` lança exceção por timeout no banco. Qual o tratamento correto? (selecione 1)
 > a) Encerrar o loop e retornar erro ao usuário

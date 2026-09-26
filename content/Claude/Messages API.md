@@ -94,7 +94,7 @@ Tem 2 eventos que podem aparecer em qualquer lugar (pois eles são enviado duran
 -----
 ## Checkpoint 1: Anatomia da chamada e streaming
 
-> [!question]- 1. Um chatbot de suporte responde certo na primeira mensagem, mas na segunda "esquece" o que o usuário disse antes. Cada pergunta é enviada como uma única mensagem `user`. Qual é a causa? (selecione 1)
+> [!question] 1. Um chatbot de suporte responde certo na primeira mensagem, mas na segunda "esquece" o que o usuário disse antes. Cada pergunta é enviada como uma única mensagem `user`. Qual é a causa? (selecione 1)
 > a) O modelo escolhido não suporta conversas multi-turn
 > b) A API é stateless; o histórico precisa ser reenviado em `messages` a cada chamada
 > c) Falta enviar o `id` da resposta anterior para a API recuperar o contexto
@@ -103,7 +103,7 @@ Tem 2 eventos que podem aparecer em qualquer lugar (pois eles são enviado duran
 > > [!success]- Resposta
 > > **b**. A API não guarda nada entre chamadas. Quem mantém o histórico é o cliente, reenviando as mensagens anteriores (user e assistant alternados). O `id` serve só para log; `system` é instrução, não histórico.
 
-> [!question]- 2. Uma aplicação pede ao modelo um JSON com dados extraídos de contratos. Em contratos longos, o parser falha porque o JSON vem sem a chave de fechamento. A API retorna HTTP 200. Qual a ação correta? (selecione 1)
+> [!question] 2. Uma aplicação pede ao modelo um JSON com dados extraídos de contratos. Em contratos longos, o parser falha porque o JSON vem sem a chave de fechamento. A API retorna HTTP 200. Qual a ação correta? (selecione 1)
 > a) Adicionar retry com backoff, pois a API está instável
 > b) Trocar para um modelo maior, que gera JSON mais confiável
 > c) Verificar `stop_reason == "max_tokens"` e aumentar `max_tokens`
@@ -112,7 +112,7 @@ Tem 2 eventos que podem aparecer em qualquer lugar (pois eles são enviado duran
 > > [!success]- Resposta
 > > **c**. Resposta cortada por `max_tokens` vem com 200 e JSON válido porém incompleto. O sinal é `stop_reason: "max_tokens"` (ou `output_tokens` igual ao limite). Retry não resolve, modelo maior não resolve, e `stop_sequences` pararia *antes* de escrever o `}`.
 
-> [!question]- 3. Qual requisição abaixo é válida na Messages API? (selecione 1)
+> [!question] 3. Qual requisição abaixo é válida na Messages API? (selecione 1)
 > a) `messages=[{"role":"system","content":"Seja breve"},{"role":"user","content":"Oi"}]`
 > b) `messages=[{"role":"user","content":"Oi"},{"role":"user","content":"Tudo bem?"}]`
 > c) `model="claude-sonnet-5", messages=[{"role":"user","content":"Oi"}]` sem `max_tokens`
@@ -121,7 +121,7 @@ Tem 2 eventos que podem aparecer em qualquer lugar (pois eles são enviado duran
 > > [!success]- Resposta
 > > **d**. Obrigatórios: `model`, `max_tokens`, `messages`. `system` é campo próprio, não um role. Não existe `role: "system"` (a), roles precisam alternar (b) e `max_tokens` é obrigatório (c).
 
-> [!question]- 4. Você quer que o modelo devolva apenas os 3 primeiros itens de uma lista numerada ("1.", "2.", "3."...). Qual configuração faz isso? (selecione 1)
+> [!question] 4. Você quer que o modelo devolva apenas os 3 primeiros itens de uma lista numerada ("1.", "2.", "3."...). Qual configuração faz isso? (selecione 1)
 > a) `stop_sequences=["\n3."]`
 > b) `stop_sequences=["\n4."]`
 > c) `max_tokens=3`
@@ -130,7 +130,7 @@ Tem 2 eventos que podem aparecer em qualquer lugar (pois eles são enviado duran
 > > [!success]- Resposta
 > > **b**. O modelo para antes de escrever a string de parada. Para manter o item 3, a parada é o início do item 4. A resposta virá com `stop_reason: "stop_sequence"` e `stop_sequence: "\n4."`. `max_tokens=3` corta por quantidade, não por conteúdo.
 
-> [!question]- 5. Uma empresa precisa classificar 50 mil e-mails antigos por sentimento. Não há urgência e o custo importa. Qual abordagem? (selecione 1)
+> [!question] 5. Uma empresa precisa classificar 50 mil e-mails antigos por sentimento. Não há urgência e o custo importa. Qual abordagem? (selecione 1)
 > a) Chamadas síncronas com `stream=True` para evitar timeout
 > b) Batch API, que processa em até 24h com desconto de 50%
 > c) Uma única chamada com todos os e-mails no `system` prompt
@@ -139,7 +139,7 @@ Tem 2 eventos que podem aparecer em qualquer lugar (pois eles são enviado duran
 > > [!success]- Resposta
 > > **b**. Lote sem urgência é Batch API: sem conexão aberta, sem timeout, metade do preço. Streaming resolve latência percebida e timeout de respostas longas, não volume. Colocar tudo numa chamada estoura contexto e mistura resultados.
 
-> [!question]- 6. Antes de enviar um documento grande, a aplicação precisa saber se ele cabe na janela de contexto e estimar o custo, sem gerar resposta. O que usar? (selecione 1)
+> [!question] 6. Antes de enviar um documento grande, a aplicação precisa saber se ele cabe na janela de contexto e estimar o custo, sem gerar resposta. O que usar? (selecione 1)
 > a) Chamar `messages.create` com `max_tokens=1` e ler `usage.input_tokens`
 > b) Dividir o número de caracteres por 4
 > c) O endpoint `count_tokens`, que recebe a mesma estrutura de mensagens e retorna `input_tokens` sem cobrar
@@ -148,7 +148,7 @@ Tem 2 eventos que podem aparecer em qualquer lugar (pois eles são enviado duran
 > > [!success]- Resposta
 > > **c**. `count_tokens` conta com o tokenizador real do modelo, sem gerar saída e sem custo. (a) funciona mas paga pela chamada; (b) é estimativa; (d) mistura os eventos — `input_tokens` vem no `message_start`, e ainda assim seria uma chamada paga.
 
-> [!question]- 7. Uma UI de chat recebe reclamações de que o assistente "trava" por vários segundos antes de responder. O tempo total de geração é aceitável. O que muda isso? (selecione 1)
+> [!question] 7. Uma UI de chat recebe reclamações de que o assistente "trava" por vários segundos antes de responder. O tempo total de geração é aceitável. O que muda isso? (selecione 1)
 > a) Reduzir `max_tokens` para respostas mais curtas
 > b) Usar `stream=True` para reduzir o tempo até o primeiro token
 > c) Trocar para a Batch API
@@ -157,7 +157,7 @@ Tem 2 eventos que podem aparecer em qualquer lugar (pois eles são enviado duran
 > > [!success]- Resposta
 > > **b**. O problema é percepção de latência, não tempo total. Streaming não acelera a geração, mas o primeiro token chega quase na hora e o texto vai aparecendo. Batch é o oposto (assíncrono); `temperature` não afeta velocidade.
 
-> [!question]- 8. Durante um stream, em qual evento a aplicação descobre se a resposta foi cortada por `max_tokens`? (selecione 1)
+> [!question] 8. Durante um stream, em qual evento a aplicação descobre se a resposta foi cortada por `max_tokens`? (selecione 1)
 > a) `message_start`
 > b) `content_block_stop`
 > c) `message_delta`
@@ -166,7 +166,7 @@ Tem 2 eventos que podem aparecer em qualquer lugar (pois eles são enviado duran
 > > [!success]- Resposta
 > > **c**. `stop_reason` e `usage.output_tokens` chegam no `message_delta`, quase no fim. `message_start` traz `input_tokens`; `message_stop` só sinaliza o fim; `content_block_stop` fecha um bloco.
 
-> [!question]- 9. Quais afirmações sobre `usage` estão corretas? (selecione 2)
+> [!question] 9. Quais afirmações sobre `usage` estão corretas? (selecione 2)
 > a) `input_tokens` inclui system prompt, histórico e a mensagem atual
 > b) `output_tokens` custa menos por token que `input_tokens`
 > c) Os valores são contados pelo tokenizador real do modelo
@@ -175,7 +175,7 @@ Tem 2 eventos que podem aparecer em qualquer lugar (pois eles são enviado duran
 > > [!success]- Resposta
 > > **a, c**. Output é *mais* caro por token (b errada). Em streaming, `usage` vem dividido: input no `message_start`, output no `message_delta` (d errada).
 
-> [!question]- 10. Ao guardar a resposta do modelo no histórico para a próxima chamada, qual é a forma correta? (selecione 1)
+> [!question] 10. Ao guardar a resposta do modelo no histórico para a próxima chamada, qual é a forma correta? (selecione 1)
 > a) `{"role": "assistant", "content": resp.content[0].text}`
 > b) `{"role": "assistant", "content": resp.content}`
 > c) `{"role": "user", "content": resp.content}`
@@ -184,7 +184,7 @@ Tem 2 eventos que podem aparecer em qualquer lugar (pois eles são enviado duran
 > > [!success]- Resposta
 > > **b**. O `content` do assistant é a lista de blocos inteira. Guardar só o texto funciona hoje, mas quebra quando a resposta tem bloco `tool_use`. Role é sempre `assistant`; `id` não carrega conteúdo.
 
-> [!question]- 11. Em um stream, a aplicação recebe `content_block_delta` de um bloco `tool_use` e chama `json.loads` em cada `partial_json`. O parse falha. Por quê? (selecione 1)
+> [!question] 11. Em um stream, a aplicação recebe `content_block_delta` de um bloco `tool_use` e chama `json.loads` em cada `partial_json`. O parse falha. Por quê? (selecione 1)
 > a) `tool_use` não suporta streaming
 > b) Cada `partial_json` é um fragmento de string; só o conjunto até o `content_block_stop` forma JSON válido
 > c) É preciso usar `text_delta` para blocos de tool
@@ -193,7 +193,7 @@ Tem 2 eventos que podem aparecer em qualquer lugar (pois eles são enviado duran
 > > [!success]- Resposta
 > > **b**. Fragmentos de `input_json_delta` não são JSON sozinhos. Acumula e faz o parse no `content_block_stop` do bloco.
 
-> [!question]- 12. Uma chamada com streaming retornou HTTP 200, mas o texto veio incompleto e nunca chegou `message_stop`. `stop_reason` não foi recebido. O que aconteceu? (selecione 1)
+> [!question] 12. Uma chamada com streaming retornou HTTP 200, mas o texto veio incompleto e nunca chegou `message_stop`. `stop_reason` não foi recebido. O que aconteceu? (selecione 1)
 > a) A resposta foi cortada por `max_tokens`
 > b) Chegou um evento `error` no meio do stream; o status HTTP não muda depois que o stream abre
 > c) O `ping` interrompeu o stream
@@ -343,7 +343,7 @@ O que fazer:
 
 ## Checkpoint 2: Vision, Structured output e Erros
 
-> [!question]- 1. Uma aplicação envia fotos de faturas em 4000×3000 pixels para extração de dados. A latência está alta e o custo por chamada também. O que fazer? (selecione 1)
+> [!question] 1. Uma aplicação envia fotos de faturas em 4000×3000 pixels para extração de dados. A latência está alta e o custo por chamada também. O que fazer? (selecione 1)
 > a) Trocar para `source.type = "url"` para reduzir o tamanho do payload
 > b) Redimensionar as imagens antes de enviar; acima de ~1568px a API reduz sozinha e não ganha precisão
 > c) Enviar a imagem em uma mensagem `assistant` para não contar como input
@@ -352,7 +352,7 @@ O que fazer:
 > > [!success]- Resposta
 > > **b**. Imagem custa ≈ pixels/750 e acima do máximo útil a API redimensiona de qualquer forma. `url` só muda de onde a API baixa; imagem só entra em `user`; `max_tokens` é saída.
 
-> [!question]- 2. Um mesmo manual em PDF de 80 páginas é consultado centenas de vezes por dia. Hoje ele é enviado em `base64` em toda chamada. O que reduz o payload sem mudar o resultado? (selecione 1)
+> [!question] 2. Um mesmo manual em PDF de 80 páginas é consultado centenas de vezes por dia. Hoje ele é enviado em `base64` em toda chamada. O que reduz o payload sem mudar o resultado? (selecione 1)
 > a) Enviar só a primeira página
 > b) Subir uma vez pela Files API e referenciar por `file_id` (`source.type = "file"`)
 > c) Converter o PDF em texto puro manualmente e enviar como bloco `text`
@@ -361,7 +361,7 @@ O que fazer:
 > > [!success]- Resposta
 > > **b**. `file` evita reenviar os bytes a cada chamada. Só a primeira página perde conteúdo; texto puro perde tabelas e layout que o `document` preserva; `url` precisa ser pública.
 
-> [!question]- 3. Sobre PDFs enviados como bloco `document`, quais afirmações estão corretas? (selecione 2)
+> [!question] 3. Sobre PDFs enviados como bloco `document`, quais afirmações estão corretas? (selecione 2)
 > a) A API extrai o texto e também renderiza cada página como imagem
 > b) O custo é apenas o dos tokens do texto extraído
 > c) `source` aceita `base64`, `url` e `file`
@@ -370,7 +370,7 @@ O que fazer:
 > > [!success]- Resposta
 > > **a, c**. Paga texto + imagem por página (b errada). O modelo só lê; a resposta é texto (d errada).
 
-> [!question]- 4. A resposta precisa ser sempre um JSON válido em um schema fixo, sem texto ao redor, para alimentar um pipeline. O modelo em uso suporta saída estruturada nativa. Qual a melhor opção? (selecione 1)
+> [!question] 4. A resposta precisa ser sempre um JSON válido em um schema fixo, sem texto ao redor, para alimentar um pipeline. O modelo em uso suporta saída estruturada nativa. Qual a melhor opção? (selecione 1)
 > a) Pedir no `system` "responda apenas com JSON"
 > b) Prefill com `{` na última mensagem `assistant`
 > c) `output_format` com `json_schema`
@@ -379,7 +379,7 @@ O que fazer:
 > > [!success]- Resposta
 > > **c**. "Garantir formato" com nativo disponível → `output_format`. Prompt e prefill não garantem; `stop_sequences` cortaria antes do `}`.
 
-> [!question]- 5. Você quer que o modelo explique em prosa a análise de um contrato e também devolva os campos extraídos em JSON, na mesma resposta. O que usar? (selecione 1)
+> [!question] 5. Você quer que o modelo explique em prosa a análise de um contrato e também devolva os campos extraídos em JSON, na mesma resposta. O que usar? (selecione 1)
 > a) `output_format` nativo, que devolve texto e JSON
 > b) Tool use com `tool_choice`, obtendo um bloco `text` e um bloco `tool_use`
 > c) Duas chamadas: uma para o texto, outra para o JSON, sempre
@@ -388,7 +388,7 @@ O que fazer:
 > > [!success]- Resposta
 > > **b**. Nativo devolve só o JSON. Tool use permite `text` + `tool_use` numa resposta. Duas chamadas funcionam, mas não são "a melhor opção".
 
-> [!question]- 6. Uma aplicação com `output_format` nativo recebe esporadicamente JSON incompleto. O que verificar primeiro? (selecione 1)
+> [!question] 6. Uma aplicação com `output_format` nativo recebe esporadicamente JSON incompleto. O que verificar primeiro? (selecione 1)
 > a) Se o schema está no formato correto
 > b) Se `stop_reason == "max_tokens"` — schema garante formato só se o modelo terminar
 > c) Se `temperature` está em 0
@@ -397,7 +397,7 @@ O que fazer:
 > > [!success]- Resposta
 > > **b**. Schema restringe a geração, não o tamanho. Cortou por `max_tokens` → JSON válido porém incompleto. Checar `stop_reason` antes do parse.
 
-> [!question]- 7. Quais erros abaixo devem ser retentados com backoff exponencial? (selecione 2)
+> [!question] 7. Quais erros abaixo devem ser retentados com backoff exponencial? (selecione 2)
 > a) 400 `invalid_request_error`
 > b) 429 `rate_limit_error`
 > c) 401 `authentication_error`
@@ -406,7 +406,7 @@ O que fazer:
 > > [!success]- Resposta
 > > **b, d**. 429, 500 e 529 são temporários. 400 e 401 são problema da requisição; retentar igual repete o erro.
 
-> [!question]- 8. Uma aplicação recebe 429 nos horários de pico. As respostas não precisam ser imediatas — são relatórios gerados à noite. Qual a ação mais eficaz? (selecione 1)
+> [!question] 8. Uma aplicação recebe 429 nos horários de pico. As respostas não precisam ser imediatas — são relatórios gerados à noite. Qual a ação mais eficaz? (selecione 1)
 > a) Retentar imediatamente em loop até passar
 > b) Migrar para a Batch API, que tem limites próprios e mais altos
 > c) Aumentar `max_tokens`
@@ -415,7 +415,7 @@ O que fazer:
 > > [!success]- Resposta
 > > **b**. Sem urgência → Batch: limites separados, sem conexão aberta, metade do preço. Retry em loop piora a sobrecarga; `max_tokens` e `temperature` não afetam rate limit.
 
-> [!question]- 9. Como uma aplicação pode desacelerar antes de receber um 429? (selecione 1)
+> [!question] 9. Como uma aplicação pode desacelerar antes de receber um 429? (selecione 1)
 > a) Lendo `usage.input_tokens` em cada resposta
 > b) Lendo os headers `anthropic-ratelimit-*-remaining` e `-reset` em cada resposta
 > c) Chamando `count_tokens` antes de cada requisição
