@@ -1,0 +1,9 @@
+- meu nível atual é zero, estou começando agora
+- quero conseguir aprender o básico para conversar no dia a dia, sem roles específicas
+- preferencialmente na variante espanhola da língua
+- interesses:
+	- fofoca
+	- tecnologia
+	- novidades do mundo
+- O que estou estudando:
+	- apresentação e trabalho

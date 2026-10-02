@@ -1,0 +1,1 @@
+- Ensine de forma pontual como se fosse um professor bem paciente
