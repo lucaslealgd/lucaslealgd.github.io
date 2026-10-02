@@ -1,4 +1,4 @@
-O que é GODOT?
+# O que é GODOT?
 > Godot é um motor (engine) de jogos 2D e 3D de uso geral projetado para dar suporte a qualquer tipo de projeto. Você pode usá-lo para criar jogos ou aplicativos que podem ser lançados em computadores, celulares e também na internet. - [O que é o Godot? - Documentação Oficial](https://docs.godotengine.org/pt-br/4.x/getting_started/introduction/introduction_to_godot.html#:~:text=Godot%20%C3%A9%20um%20motor%20(engine)%20de%20jogos%202D%20e%203D%20de%20uso%20geral%20projetado%20para%20dar%20suporte%20a%20qualquer%20tipo%20de%20projeto.%20Voc%C3%AA%20pode%20us%C3%A1%2Dlo%20para%20criar%20jogos%20ou%20aplicativos%20que%20podem%20ser%20lan%C3%A7ados%20em%20computadores%2C%20celulares%20e%20tamb%C3%A9m%20na%20internet.)
 # Instalação
 - Acessar: **[godotengine.org](https://godotengine.org/download/)**
@@ -13,7 +13,7 @@ O que é GODOT?
 		- Executa a que não tem `_console` no nome
 - Ao abrir a primeira vez vai perguntar se quer explorar a biblioteca, clica em "**Cancel**"
 # Principais conceitos
-Antes de falar de qualquer conceito de programação, vamos primeiro entender melhor sobre a GODOT em si e criar o nosso primeiro personagem para então usarmos a programação nele de forma mais visual.
+Antes de falar de qualquer conceito de programação, vamos primeiro entender melhor sobre a GODOT em si.
 
 > Em Godot, um jogo é uma **árvore** de **nós** que você agrupa em **cenas**. Você pode conectar esses nós para que eles possam se comunicar usando **sinais**. - [Visão geral dos principais conceitos do Godot - Documentação Oficial](https://docs.godotengine.org/pt-br/4.x/getting_started/introduction/key_concepts_overview.html#:~:text=Em%20Godot%2C%20um%20jogo%20%C3%A9%20uma%20%C3%A1rvore%20de%20n%C3%B3s%20que%20voc%C3%AA%20agrupa%20em%20cenas.%20Voc%C3%AA%20pode%20conectar%20esses%20n%C3%B3s%20para%20que%20eles%20possam%20se%20comunicar%20usando%20sinais.)
 
@@ -24,9 +24,9 @@ De forma simplificada, **criar um jogo na GODOT vai ser combinar e estender nós
 Para criarmos um Player, teríamos basicamente:
 ![nó, árvore e cena](../imagens/GODOT/noArvoreCena.png)
 ## Nós
-São os **menores blocos de construção do jogo**, cada um com sua função específica (é como se fosse cada tijolinho que a gnt vai usar pra montar nosso game)
+São os **menores blocos de construção do jogo**, cada um com sua função específica (é como se fosse cada tijolinho que a gente vai usar pra montar nosso game)
 Só que os nós podem ter outros nós dentro deles, como por exemplo na imagem acima: 
-- `CharacterBody2D`: representa um personagem que pode se movimentar e colidir (é o **nó raiz** e todos esses outros nós vão estar "dentro" dele e serão usados para adicionar propriedades a esse nó (como área de colisão, imagem e câmera))
+- `CharacterBody2D`: representa um personagem que pode se movimentar e colidir (é o **nó raiz** e todos esses outros nós vão estar "dentro" dele e serão usados para adicionar capacidades ou comportamentos a esse nó (como área de colisão, imagem e câmera))
 	- `Camera2D`: funciona como a câmera do jogo (acompanha o personagem)
 	- `Sprite2D`: exibe uma imagem, podendo ser a aparência do personagem por exemplo
 	- `CollisionShape2D`: define a área de colisão, permitindo que colida com paredes e objetos
@@ -34,6 +34,8 @@ Ao fazermos isso estamos *organizando os nós em estruturas de pai e filhos* cha
 Ao *salvar uma árvore de nós como uma **cena***, ela é exibida como **um único nó** com a estrutura interna oculta no editor (é como se essa árvore virasse um outro tijolinho "mais potente" agora com um objetivo específico)
 A maioria das coisas em GODOT será feita com os nós (já existem nós prontos para quase tudo que vamos precisar!)
 Observe que todos os nós citados acima terminam com `2D` e como vocês devem imaginar isso acontece pois estamos falando de cenas 2D, quando forem cenas 3D os nós terminam como `3D`
+- Nem todo nó vai ser 2D ou 3D, isso só acontece quando estamos falando de posições no espaço
+- Alguns nós vão ser como `Timer`, `AudioStreamPlayer`, `Button`, etc
 ## Cenas
 Na GODOT você irá construir **cenas reutilizáveis** agrupando nós, que podem ser um personagem, uma arma, um menu de interface, uma casa ou até um nível inteiro
 - Permite que a gente foque em 1 parte do jogo de cada vez
@@ -43,13 +45,13 @@ Na GODOT você irá construir **cenas reutilizáveis** agrupando nós, que podem
 Uma cena **pode ser usada em várias outras cenas** e se quisermos editar basta mudar na cena e isso vai ser replicado em todos os usos que estamos fazendo dela. Por exemplo podemos usar a cena "coin" nos levels 1 e 2 e se quisermos mudar a cor da moeda é só ir na "coin", ajustar e isso é replicado em todos os usos.
 ![Brackeys_Jogo1_img2.png](../imagens/GODOT/Brackeys_Jogo1_img2.png)
 ## Árvore da cena
-Todas as cenas do jogo serão reunidas na árvore de cenas, onde cada ramo será uma cena diferente. **O seu jogo nada mais é que uma ligação entre várias cenas**
-Seria algo como as cenas abaixo:
+**Quando o jogo roda existe 1 única árvore de nós** com tudo que foi criado dentro dela. Cada cena que usamos vira um galho dessa árvore (ou seja, **o jogo nada mais é que várias cenas ligadas**)
+Seria algo como:
 - Game <- é chamado de nó raiz (root)
-	- Player
+	- Player <- cena instanciada
 		- Graphics
 		- Collider
-	- Enemy
+	- Enemy <- outra cena instanciada
 ## Sinais
 **Nós emitem sinais quando certos eventos ocorrem**, que podem ser usados para fazer com que **nós se comuniquem** de forma simples
 Por exemplo, um botão emite um sinal ao ser pressionado. Você pode criar um código para ser executado ao receber esse evento de botão pressionado (como começar o jogo ou abrir um menu)
@@ -66,9 +68,9 @@ Assim que abrir a GODOT a primeira tela que irá aparecer é o **Gerenciador de 
 	- **Avançado+**: permite muito **mais complexidade no desenvolvimento** (até 3D complexo) mas apenas para plataformas de **desktop**
 	- **Mobile**: Desktop + **mobile** mas é **menos escalável para cenas complexas / 3D**
 	- **Compatibilidade**: também roda **web** porém com menos recursos, tem renderização bem mais rápida de cenas simples. Usa renderizador **OpenGL 3**
-	  
 	 ![Renderizador.png](../imagens/GODOT/Renderizador.png)
-		- A própria Godot faz todo o trabalho pra exportar pra qualquer plataforma que seja (Windows, Linux, Mac, iOS, etc)
+
+A própria Godot faz todo o trabalho pra exportar pra qualquer plataforma que seja (Windows, Linux, Mac, iOS, etc)
 
 - Então basicamente para criar um novo projeto é só seguir os passos abaixo:  ![CriandoNovoProjeto.png](../imagens/GODOT/CriandoNovoProjeto.png)
 ## O editor da GODOT
@@ -83,7 +85,7 @@ Assim que abrir a GODOT a primeira tela que irá aparecer é o **Gerenciador de 
 - As abas podem ser personalizadas!
 - Por padrão, o painel inferior fica minimizado mas ao clicar em alguma das opções desse painel ele expande verticalmente
 - Nos **botões de troca de área de trabalho** podemos ver **as 5 telas principais da GODOT**:
-	- **2D**: será usada para **todos os tipos de jogos**
+	- **2D**: será usada para **todos os tipos de jogos** (é onde montamos a interface (UI))
 	- **3D**: é possível trabalhar com malhas (meshes), luzes e criação de leveis para jogos 3D
 	- **Script**: é um editor de código completo com depurador, preenchimento automático avançado e referência de código integrada.
 	- **Jogo**: é onde o projeto (seu jogo) vai aparecer quando ele for executado. 
