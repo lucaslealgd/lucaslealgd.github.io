@@ -36,6 +36,8 @@ A maioria das coisas em GODOT será feita com os nós (já existem nós prontos 
 Observe que todos os nós citados acima terminam com `2D` e como vocês devem imaginar isso acontece pois estamos falando de cenas 2D, quando forem cenas 3D os nós terminam como `3D`
 - Nem todo nó vai ser 2D ou 3D, isso só acontece quando estamos falando de posições no espaço
 - Alguns nós vão ser como `Timer`, `AudioStreamPlayer`, `Button`, etc
+Para organizar melhor, podemos clicar com o botão direito e renomear esse nó
+- Para **criar um nó**, vamos no sinal de "**+**" (ou fazer "**Ctrl+A**") mostrado acima, buscar pelo tipo de nó que queremos e então "**Criar**"
 ## Cenas
 Na GODOT você irá construir **cenas reutilizáveis** agrupando nós, que podem ser um personagem, uma arma, um menu de interface, uma casa ou até um nível inteiro
 - Permite que a gente foque em 1 parte do jogo de cada vez
@@ -44,6 +46,7 @@ Na GODOT você irá construir **cenas reutilizáveis** agrupando nós, que podem
 - Chamamos de "**aninhar cenas**" ("nesting")
 Uma cena **pode ser usada em várias outras cenas** e se quisermos editar basta mudar na cena e isso vai ser replicado em todos os usos que estamos fazendo dela. Por exemplo podemos usar a cena "coin" nos levels 1 e 2 e se quisermos mudar a cor da moeda é só ir na "coin", ajustar e isso é replicado em todos os usos.
 ![Brackeys_Jogo1_img2.png](../imagens/GODOT/Brackeys_Jogo1_img2.png)
+- Para **salvar uma cena** vamos no nó, fazer "**Ctrl+S**" e escolher onde salvar (podemos organizar por pastas)
 ## Árvore da cena
 **Quando o jogo roda existe 1 única árvore de nós** com tudo que foi criado dentro dela. Cada cena que usamos vira um galho dessa árvore (ou seja, **o jogo nada mais é que várias cenas ligadas**)
 Seria algo como:
@@ -94,3 +97,13 @@ A própria Godot faz todo o trabalho pra exportar pra qualquer plataforma que se
 - **Documentação**: é possível acessar a documentação da Godot clicando em "Ajuda" no menu principal, pressionando F1 (ou Fn+F1), clicando com o Ctrl segurado no nome de uma classe, função, ou em variáveis embutidas no editor de código, etc
 ### Painel de arquivos
 - Para criar uma nova pasta para os arquivos basta clicar com o botão direito do mouse e "Nova Pasta"
+### Inspetor
+É onde vamos **ajustar as propriedades do nó** como posição, imagem, textura, material, etc
+- Precisamos **clicar no nó** para que o inspetor desse nó apareça
+### Botão de teste de execução
+Podemos usar para testar como está ficando nosso jogo
+- ![Brackeys_Jogo1_img3.png](../imagens/GODOT/Brackeys_Jogo1_img3.png) (Executar Projeto (F5)): vai rodar o nosso jogo
+	- Na primeira vez pode falar que a cena principal não foi definida, nesse caso escolha "**Selecionar Atual**"
+		- Precisamos falar pra GODOT qual cena executar
+		- Depois podemos alterar nas configurações do projeto
+	- Pra **parar** podemos **fechar a janela** que abriu ou apertar no botão de **Stop**
