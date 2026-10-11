@@ -1,10 +1,9 @@
 Link do vídeo: https://youtu.be/LOhfqjmasi0?si=JzgCt9r8iZ8poMSK
 Obs: o vídeo foi feito na versão 4.1 da GODOT e hoje (out/26) estamos na versão 4.6 então algumas coisas vão ser diferentes (e vou citar aqui)
 Os capítulos abaixo estão separados de acordo com a divisão do vídeo
-# GODOT
 - GODOT é muito amigável pra quem tá começando, open source e grátis
 - dá pra fazer desde jogos 2D até um FPS 3D
-## Começando
+# Começando
 Para instalar: [[Primeiros Passos#Instalação]]
 - é muito fácil de instalar e roda até no browser
 
@@ -41,7 +40,7 @@ Voltando pro canvas, no lado inferior esquerdo temos o **PAINEL DE ARQUIVOS (lis
 - Vamos criar 3 novas pastas: assets, scenes e scripts
 - Vamos baixar os assets, extrair o zip e arrastar todas as pastas pra essa pasta de assets
 
-## Como a GODOT funciona
+# Como a GODOT funciona
 Leia mais em: [[Primeiros Passos#Principais conceitos]]
 Pra fazer qualquer coisa na GODOT nós vamos usar **nodes**
 Então qualquer elemento na GODOT vai ser **um conjunto de nós**, sendo assim o nó vai ser o bloco fundamental do nosso jogo!
@@ -60,11 +59,13 @@ Para evitar criar um nó dentro de outro dentro de outro até ficar uma coisa su
 
 Todas as cenas vão ser organizadas de forma a termos uma **árvore de nós**, onde o primeiro nó é chamado de nó raiz
 
-## Player 1.0
+Assim que criarmos o jogo ele já vai aparecer com uma primeira cena, vamos usar ela para criar o nosso personagem.
+# Player 1.0
+## CharacterBody2D
 A base do nosso jogo será feita através da criação de nós, se você não sabe fazer ainda leia: [[Primeiros Passos#Nós]]
 Sempre que quisermos **testar como tá ficando**, seguir os passos em [[Primeiros Passos#Botão de teste de execução]]
 
-- Vamos clicar em "**+**" e procurar por "**CharacterBody2D**"
+- Vamos clicar em "**+**" e procurar por "**CharacterBody2D**". Ele será o nosso nó raiz dessa cena!
 	- Ao criar não vamos ver nada pq precisamos adicionar as partes gráficas
 
 O próximo passo é adicionar a animação e pra isso vamos precisar ajustar as propriedades no Inspetor, leia: [[Primeiros Passos#Inspetor]]
@@ -93,4 +94,93 @@ Vai ser o nó usado para criar uma animação 2D na GODOT
 	- Se quisermos remover basta clicar novamente
 	- Para criar a animação de parada (IDLE) podemos clicar nos 4 primeiros sprites e ir em "**Adicionar 4 Quadro(s)**"
 ![Brackeys_Jogo1_img5.png](../imagens/GODOT/Brackeys_Jogo1_img5.png)
-- Nesse momento já vamos ver o nosso Character na tela e podemos usar o scroll do mouse para aproximar
+- Nesse momento já vamos ver o nosso Character na tela e podemos usar o **scroll do mouse para aproximar** ou **segurar o botão do scroll para mover** a visualização do editor
+Feito isso essa animação já vai ser criada
+
+Agora podemos configurar a animação:
+![painelAnimacao.png](../imagens/GODOT/painelAnimacao.png)
+- O botão de **play** em vermelho permite que a gente **execute a animação** (vai ficar trocando entre as imagens)
+- No **FPS** vamos definir a **velocidade da animação**
+- O botão de **repetição da animação** (em azul) faz com que a animação fique sendo repetida continuamente
+	- Quando chega na última imagem da animação, volta pra primeira
+	- Vem ativado por padrão
+- O **auto-play** faz a animação **começar assim que o nó entra na cena**
+	- Se for um nó que já começa no início do jogo, a animação acontece assim que o jogo começa
+- Podemos **renomear a animação** clicando 2 vezes no nome dela do lado esquerdo (em laranja)
+
+Para **ajustar o ator na tela**, podemos **clicar com o botão esquerdo do mouse** e **mover esse nó** até a linha de referência (estamos movendo o nó filho e não o nó raiz)
+
+Antes de seguir vamos corrigir um problema rápido do ator parecer meio "borrado"
+#### Ator borrado
+Ao visualizar o ator no nosso jogo, ele aparece assim:
+![Brackeys_Jogo1_img6.png](../imagens/GODOT/Brackeys_Jogo1_img6.png)
+
+Isso acontece pois é uma pixel art que precisa de bordas bem definidas
+Por padrão a Godot vai tentar fazer uma suavização na imagem pra ficar melhor só que isso faz ficar borrado se é pixel art
+Para desativar vamos ir em **Projeto > Configurações do Projeto > Renderização > Texturas** e em "**Filtro de Textura Padrão**" vamos mudar para "**Nearest**"
+Feito isso, ele fica muito mais nítido:
+![Brackeys_Jogo1_img7.png](../imagens/GODOT/Brackeys_Jogo1_img7.png)
+
+### CollisionShape2D
+Feito isso já configuramos boa parte do visual do nosso player, mas ainda temos esse **ícone de alerta** mostrado no nó e ao passar o mouse em cima é exibido uma mensagem dizendo que esse **nó não tem forma** 
+![erroNo.png](../imagens/GODOT/erroNo.png)
+
+Isso acontece pois o CharacterBody2D é um **nó físico** e sempre que for físico a gente precisa definir um "**shape**" para que a parte física da engine consiga trabalhar com ele (o sprite é só desenho, a engine de física não enxerga pixels, só **shape**)
+
+Para fazer isso vamos adicionar um novo nó de "**CollisionShape2D**" e novamente ir no inspetor
+- Vamos **selecionar o Shape que fizer mais sentido** para o personagem e ajustar até ficar dentro da nossa imagem
+![Shape2D.png](../imagens/GODOT/Shape2D.png)
+
+Segundo o próprio Brackeys raramente eles vão precisar ser muito precisos, o que pode ser frustrante é se for muito maior pois vai dar a sensação de que ele tá "encostando" no vazio ou flutuando na tela
+## Colocando o jogador no jogo
+Para fazer isso vamos precisar de ter o jogador salvo como uma cena que chamaremos de "player" e depois ter uma outra cena ("game") onde iremos ter tanto esse jogador quanto uma câmera para acompanhá-lo
+
+Se não lembra de cenas, leia: [[Primeiros Passos#Cenas]]
+Para criar cenas, lembre-se de: [[Primeiros Passos#Cenas abertas]]
+
+Para começar:
+- Vamos dar 2 cliques no "**CharacterBody2D**" e trocar o nome para "**Player**"
+- Depois "**Ctrl+S**" e salvar a cena como "**player.tscn**"
+- Agora vamos criar uma nova cena contendo apenas um "**Node2D**" que vamos renomear para "**Game**" e salvar essa cena como "**game.tscn**"
+- **Com a cena "game" aberta, selecionar o arquivo de "player.tscn" e arrastar pro canvas**
+	- Com isso o nó do Player já vai ser instanciado (falamos importar quando estamos trazendo assets, para cenas a gente instancia essas cenas) abaixo do nó principal da cena "**game**"
+	- ![Brackeys_Jogo1_img9.png](../imagens/GODOT/Brackeys_Jogo1_img9.png)
+- Podemos ajustar a posição do player simplesmente arrastando ele na tela e aqui estou colocando a origem do player bem na origem dessa cena
+	- ![Brackeys_Jogo1_img10.png](../imagens/GODOT/Brackeys_Jogo1_img10.png)
+
+Em seguida vamos criar a câmera que vai acompanhar o player
+- Pra conseguir criar o movimento do jogo vamos precisar de uma "câmera" que vai seguindo o jogador
+### Camera2D
+Primeiramente vamos adicionar o nó de "**Camera2D**" filha do nó **Player** que instanciamos
+- Ela precisa ser filha do player para conseguir acompanhar ele
+Ao afastar a visão do canvas vamos ter 2 coisas: o enquadramento da câmera (em rosa) e o viewport da janela (em azul)
+- Enquadramento: ele começa na origem mas vai se movimentar de acordo com nosso jogo
+- Viewport: é fixo na origem e é apenas uma referência mostrando o tamanho da janela (serve apenas para sabermos o que vai caber em uma tela com zoom 1)
+	- Se não tiver câmera é exatamente isso que será mostrado
+![camera2D.png](../imagens/GODOT/camera2D.png)
+
+Podemos ajustar a câmera pro zoom que quisermos e aqui vamos usar **zoom = 4** pra ficar maior
+Agora quando clicamos em F6 na cena atual já podemos ver o nosso player na tela mas nada acontece pois ainda não criamos o **script** que vai permitir o player se mover
+## Criando a movimentação
+Agora já temos a câmera mas o jogador ainda está parado e o próximo passo é criar um script que será responsável pelo movimento do player
+Para criar scripts, leia: [[Primeiros Passos#Criando scripts]]
+Vamos criar **um script no Player**, **ativar o modelo** e colocá-lo na **pasta scripts**
+
+Ao clicar em play o nosso personagem caiu imediatamente pra fora da tela
+Isso acontece pois a gente ainda não deu a ele um "chão" para **colidir**
+
+Caso a gente queira mudar a velocidade do player e de salto a gente pode abrir o script e alterar os valores para 130 e -300 por exemplo (só vamos conseguir ver isso sendo aplicado após realizar o passo abaixo)
+## StaticBody2D
+Para ter algo com o qual **o objeto possa colidir** vamos adicionar um nó de "**StaticBody2D**" na cena game, filho de Game
+- vamos usar para coisas que não vão se mover
+- Novamente vamos ter o alerta de que ele não tem forma e vamos fazer o mesmo processo que fizemos no [[How to make a Video Game - Godot Beginner Tutorial (Brackeys)#CollisionShape2D]] acima para criar um **CollisionShape2D**
+- Dessa vez, no Shape vamos escolher "**WorldBoundaryShape2D**" (que é o shape mais adequado quando queremos lidar com esses limites do nosso mundo no jogo)
+	- Ele tem essa forma e se estende infinitamente no eixo horizontal
+	- ![Brackeys_Jogo1_img11.png](../imagens/GODOT/Brackeys_Jogo1_img11.png)
+	- Podemos ajustar essa seta vermelha e fazer com que se estenda infinitamente no eixo vertical
+		- É apenas em 1 eixo, se quisermos nos 2 eixos precisamos criar 2 objetos desse
+Com isso nosso player consegue se mover com as setas e pular com a barra de espaço (caso a gente queira podemos mudar a velocidade de corrida e de pulo como falamos acima)
+
+Com isso fechamos a primeira versão do nosso player!
+# Worldbuilding 1.0
+O próximo passo é criamos o nosso mundo

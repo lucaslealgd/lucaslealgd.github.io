@@ -1,4 +1,4 @@
-# O que é GODOT?
+![[editarScript.png]]# O que é GODOT?
 > Godot é um motor (engine) de jogos 2D e 3D de uso geral projetado para dar suporte a qualquer tipo de projeto. Você pode usá-lo para criar jogos ou aplicativos que podem ser lançados em computadores, celulares e também na internet. - [O que é o Godot? - Documentação Oficial](https://docs.godotengine.org/pt-br/4.x/getting_started/introduction/introduction_to_godot.html#:~:text=Godot%20%C3%A9%20um%20motor%20(engine)%20de%20jogos%202D%20e%203D%20de%20uso%20geral%20projetado%20para%20dar%20suporte%20a%20qualquer%20tipo%20de%20projeto.%20Voc%C3%AA%20pode%20us%C3%A1%2Dlo%20para%20criar%20jogos%20ou%20aplicativos%20que%20podem%20ser%20lan%C3%A7ados%20em%20computadores%2C%20celulares%20e%20tamb%C3%A9m%20na%20internet.)
 # Instalação
 - Acessar: **[godotengine.org](https://godotengine.org/download/)**
@@ -44,9 +44,11 @@ Na GODOT você irá construir **cenas reutilizáveis** agrupando nós, que podem
 **A árvore de nós irá formar uma cena**, que ao ser salva ela será registrada como um **arquivo `.tscn`** e poderá ser reutilizada em qualquer parte do seu jogo
 É comum termos **cenas dentro de outras cenas** (como um personagem dentro de um nível do jogo)
 - Chamamos de "**aninhar cenas**" ("nesting")
+- Para fazer isso basta **abrir a cena onde deseja-se inserir a outra cena** (ex: o nível do jogo), **procurar a cena desejada no "Painel de Arquivos (FileSystem)"** (ex: o jogador) e então arrastar o arquivo da cena do "FileSystem" para o canvas da cena aberta
+![aninhandoCenas.png](../imagens/GODOT/aninhandoCenas.png)
 Uma cena **pode ser usada em várias outras cenas** e se quisermos editar basta mudar na cena e isso vai ser replicado em todos os usos que estamos fazendo dela. Por exemplo podemos usar a cena "coin" nos levels 1 e 2 e se quisermos mudar a cor da moeda é só ir na "coin", ajustar e isso é replicado em todos os usos.
 ![Brackeys_Jogo1_img2.png](../imagens/GODOT/Brackeys_Jogo1_img2.png)
-- Para **salvar uma cena** vamos no nó, fazer "**Ctrl+S**" e escolher onde salvar (podemos organizar por pastas)
+- Para **salvar uma cena** vamos fazer "**Ctrl+S**", nomear e escolher onde salvar (podemos organizar por pastas)
 ## Árvore da cena
 **Quando o jogo roda existe 1 única árvore de nós** com tudo que foi criado dentro dela. Cada cena que usamos vira um galho dessa árvore (ou seja, **o jogo nada mais é que várias cenas ligadas**)
 Seria algo como:
@@ -79,22 +81,23 @@ A própria Godot faz todo o trabalho pra exportar pra qualquer plataforma que se
 ## O editor da GODOT
 - Ao criar, basicamente teremos algumas **áreas importantes**:
 	Ver também: https://docs.godotengine.org/pt-br/4.x/getting_started/introduction/first_look_at_the_editor.html#first-look-at-godot-s-editor
-	
-	![EditorGodot.png](../imagens/GODOT/EditorGodot.png)
+![EditorGodot.png](../imagens/GODOT/EditorGodot.png)
+### Botões de troca da área de trabalho
+Podemos ver **as 5 telas principais da GODOT**:
+- **2D**: será usada para **todos os tipos de jogos** (é onde montamos a interface (UI))
+- **3D**: é possível trabalhar com malhas (meshes), luzes e criação de leveis para jogos 3D
+- **Script**: é um editor de código completo com depurador, preenchimento automático avançado e referência de código integrada.
+- **Jogo**: é onde o projeto (seu jogo) vai aparecer quando ele for executado. 
+	- Lembre-se que todas **as alterações aqui não ficam salvas** quando o jogo parar de rodar!
+- **Biblioteca de recursos**: é a biblioteca de recursos open source como assets, scripts, etc
+### Cenas abertas
+Todas as cenas abertas (em azul escuro) são exibidas como abas. Para adicionar uma nova cena basta clicar no botão de **+** ao lado!
 
-- Todas as cenas abertas (em azul escuro) são exibidas como abas. Para adicionar uma nova cena basta clicar no botão de **+** ao lado
-	- Na extrema direita dessa aba é possível mudar para o modo sem distrações (oculta as abas da interface)
-- No topo da viewport temos a barra de ferramentas / toolbar (ambos em laranja) com as ferramentas para mover, redimensionar, travar a cena, etc (essa barra muda de acordo com o contexto e nó)
-- As abas podem ser personalizadas!
-- Por padrão, o painel inferior fica minimizado mas ao clicar em alguma das opções desse painel ele expande verticalmente
-- Nos **botões de troca de área de trabalho** podemos ver **as 5 telas principais da GODOT**:
-	- **2D**: será usada para **todos os tipos de jogos** (é onde montamos a interface (UI))
-	- **3D**: é possível trabalhar com malhas (meshes), luzes e criação de leveis para jogos 3D
-	- **Script**: é um editor de código completo com depurador, preenchimento automático avançado e referência de código integrada.
-	- **Jogo**: é onde o projeto (seu jogo) vai aparecer quando ele for executado. 
-		- Lembre-se que todas **as alterações aqui não ficam salvas** quando o jogo parar de rodar!
-	- **Biblioteca de recursos**: é a biblioteca de recursos open source como assets, scripts, etc
-- **Documentação**: é possível acessar a documentação da Godot clicando em "Ajuda" no menu principal, pressionando F1 (ou Fn+F1), clicando com o Ctrl segurado no nome de uma classe, função, ou em variáveis embutidas no editor de código, etc
+![novaCena.png](../imagens/GODOT/novaCena.png)
+Na extrema direita dessa aba é possível mudar para o modo sem distrações (oculta as abas da interface)
+### Toolbar
+No topo da viewport temos a barra de ferramentas / toolbar (ambos em laranja) com as ferramentas para mover, redimensionar, travar a cena, etc (essa barra muda de acordo com o contexto e nó)
+
 ### Painel de arquivos
 - Para criar uma nova pasta para os arquivos basta clicar com o botão direito do mouse e "Nova Pasta"
 ### Inspetor
@@ -107,3 +110,20 @@ Podemos usar para testar como está ficando nosso jogo
 		- Precisamos falar pra GODOT qual cena executar
 		- Depois podemos alterar nas configurações do projeto
 	- Pra **parar** podemos **fechar a janela** que abriu ou apertar no botão de **Stop**
+- F6 (Executar cena atual): testa a cena aberta
+### Painel inferior
+Por padrão ele fica minimizado
+- É onde vai estar o depurador, o painel de animação, etc
+### Documentação
+É possível acessar a documentação da Godot clicando em "Ajuda" no menu principal, pressionando F1 (ou Fn+F1), clicando com o Ctrl segurado no nome de uma classe, função, ou em variáveis embutidas no editor de código, etc
+## Criando scripts
+A maioria das ações em GODOT serão determinadas através de **scripts** e pra isso, após termos qualquer nó na cena, vamos criar um script das seguintes formas:
+- **Selecionando o nó (vermelho)** e **clicando no ícone de criar script na parte superior do painel de cena (em rosa)** 
+- Clicando com o **botão direito no nó (vermelho)** e selecionar "**Adicionar Script...**"
+![scripts.png](../imagens/GODOT/scripts.png)
+
+Dependendo do nó o script pode ter alguns **modelos** que já **possuem algumas dinâmicas básicas**. Para ativá-lo é só **selecionar o checkbox** e abaixo vai descrever o que virá nesse modelo (em rosa)
+![scriptModelos.png](../imagens/GODOT/scriptModelos.png)
+
+Após criar o script ele ficará na frente do nó e podemos clicar para abri-lo na tela de script:
+![editarScript.png](../imagens/GODOT/editarScript.png)
