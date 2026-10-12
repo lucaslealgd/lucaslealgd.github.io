@@ -126,4 +126,4 @@ Dependendo do nó o script pode ter alguns **modelos** que já **possuem algumas
 ![scriptModelos.png](../imagens/GODOT/scriptModelos.png)
 
 Após criar o script ele ficará na frente do nó e podemos clicar para abri-lo na tela de script:
-![editarScript.png](../imagens/GODOT/editarScript.png)
+![editarScript.png|596](../imagens/GODOT/editarScript.png)

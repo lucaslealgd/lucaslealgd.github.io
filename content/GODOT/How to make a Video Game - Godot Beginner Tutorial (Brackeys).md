@@ -183,4 +183,50 @@ Com isso nosso player consegue se mover com as setas e pular com a barra de espa
 
 Com isso fechamos a primeira versão do nosso player!
 # Worldbuilding 1.0
-O próximo passo é criamos o nosso mundo
+O próximo passo é criarmos o nosso mundo e pra isso vamos eliminar o StaticBody2D que criamos acima (fizemos isso só pra ver funcionando) e adicionar um `TileMapLayer`
+- No vídeo ele fala de TileMap mas está obsoleto e foi substituído pelo TileMapLayer
+	- No TileMap a gente criava várias camadas internas tudo dentro do mesmo nó
+	- No TileMapLayer a gente cria **um nó por camada** e coloca a ordem na árvore sendo a ordem de desenho (o de baixo desenha por cima)
+## TileMapLayer
+A forma mais simples de criar cenários 2D é utilizando TILES ("azulejos") e colocando esses tiles em um grid 2D
+- Conseguimos criar vários levels diferentes com apenas poucos tiles
+Os tiles são organizados em uma grande imagem com todas as imagens juntas em 1 só em um **TILESET**
+![tiles.png](../imagens/GODOT/tiles.png)
+- Obs: existe a imagem do tileset e existe o recurso com o mesmo nome (cuidado pra não confundir)
+	- Imagem: é a imagem que vem do arquivo
+	- Recurso: é onde vamos configurar nossos tiles
+
+Então vamos adicionar um nó de **TileMapLayer** e **em Tile Set selecionar TileSet**
+![Brackeys_Jogo1_img12.png](../imagens/GODOT/Brackeys_Jogo1_img12.png)
+
+Ao fazermos isso no painel inferior vai aparecer 2 novas abas: **TileMap** e **TileSet**
+### TileSet
+Para começar vamos selecionar a aba **TileSet** e **arrastar o arquivo do tileset** para a região de "**Fontes de Tiles**"
+Ele vai confirmar se queremos criar tiles automaticamente no atlas e podemos clicar em Sim
+Ao fazer isso ele automaticamente vai detectar as células que possuem "tiles"
+![TileSet.png](../imagens/GODOT/TileSet.png)
+Podemos ajustar usando a **borracha para apagar** e clicando nos tiles que quisermos selecionar (para selecionarmos tiles maiores basta segurar o shift)
+![TileSet2.png](../imagens/GODOT/TileSet2.png)
+
+### TileMap
+Depois de configurar o TileSet, vamos mudar para a aba TileMap e ao fazermos isso podemos clicar no tile que quisermos, usar a ferramenta de pintura e ir montando todo o nosso cenário
+![TileMap.png](../imagens/GODOT/TileMap.png)
+- Se segurarmos o shift e ir clicando em um grupo de tiles podemos selecioná-los juntos (como o caso da ponte, basta segurar o shift, clicar em cada pedaço da ponte e depois levar pro canvas que ela vai junto)
+- Podemos usar a seta para selecionar um grupo de tiles (para mover, por exemplo)
+
+Podemos montar o level sendo algo da seguinte forma:
+![Brackeys_Jogo1_img13.png](../imagens/GODOT/Brackeys_Jogo1_img13.png)
+- Observe que a gente consegue fazer a árvore do tamanho que a gente quiser "montando" os tiles
+
+### Physics Layers
+Agora que temos nosso cenário, vamos precisar **adicionar física a ele**, para isso vamos **clicar no TileSet nas propriedades do TileMapLayer** e em **Physics Layers** selecionar "**+ Adicionar Elemento**"
+Depois vamos novamente em **TileSet**, clicar em "**Pintar**" e no **seletor de propriedades** escolher, dentro de **Física**, a opção "**Camada de Física 0**"
+Agora para aplicar essa física nos tiles, basta ir **clicando em cada um deles** onde queremos que isso ocorra
+![PhysicsLayers.png](../imagens/GODOT/PhysicsLayers.png)
+Podem ter alguns tiles onde não queremos que a física ocorra no tile inteiro, então pra isso a gente pode **ajustar esses losangos mostrados em rosa** movimentando de acordo com a imagem que temos no tile.
+Além disso, podemos criar novos pontos (vértices) **clicando em qualquer lugar do perímetro dessa região azul** para conseguir detalhar melhor
+![DefinindoArea.png](../imagens/GODOT/DefinindoArea.png)
+Depois que fizermos esse ajuste, **essa será a nova área de colisão**, então podemos clicar em todos os tiles que queremos que tenha essa mesma região.
+Se precisarmos "pegar" a área de algum tile que criamos podemos **usar o conta gotas** que fica ao lado do "Pintar"
+Para voltar ao formato padrão, é só clicar em "**Redefinir para formato de tile padrão**" acima do "Apagar" que vimos anteriormente
+![Brackeys_Jogo1_img14.png](../imagens/GODOT/Brackeys_Jogo1_img14.png)
