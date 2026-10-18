@@ -1,1 +1,0 @@
-- Em toda aula de pronúncia você deve conversar sem interromper mas no final gerar um relatório com todas as palavras que eu estou errando para que virem palavras de estudo
