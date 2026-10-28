@@ -152,7 +152,7 @@ Em seguida vamos criar a câmera que vai acompanhar o player
 - Pra conseguir criar o movimento do jogo vamos precisar de uma "câmera" que vai seguindo o jogador
 ### Camera2D
 Primeiramente vamos adicionar o nó de "**Camera2D**" filha do nó **Player** que instanciamos
-- Ela precisa ser filha do player para conseguir acompanhar ele
+- Ela precisa ser filha do player para conseguir acompanhar ele (vai automaticamente seguir o player)
 Ao afastar a visão do canvas vamos ter 2 coisas: o enquadramento da câmera (em rosa) e o viewport da janela (em azul)
 - Enquadramento: ele começa na origem mas vai se movimentar de acordo com nosso jogo
 - Viewport: é fixo na origem e é apenas uma referência mostrando o tamanho da janela (serve apenas para sabermos o que vai caber em uma tela com zoom 1)
@@ -161,7 +161,9 @@ Ao afastar a visão do canvas vamos ter 2 coisas: o enquadramento da câmera (em
 
 Podemos ajustar a câmera pro zoom que quisermos e aqui vamos usar **zoom = 4** pra ficar maior
 Agora quando clicamos em F6 na cena atual já podemos ver o nosso player na tela mas nada acontece pois ainda não criamos o **script** que vai permitir o player se mover
-## Criando a movimentação
+Podemos ativar a propriedade "**Position Smoothing**" para que a câmera se mova de forma mais suave ao acompanhar o player
+Também é possível mudar a posição da câmera em relação ao player (tipo pra câmera ficar mais centralizada na cabeça do player, nos pés, etc)
+## {SCRIPT} Criando a movimentação
 Agora já temos a câmera mas o jogador ainda está parado e o próximo passo é criar um script que será responsável pelo movimento do player
 Para criar scripts, leia: [[Primeiros Passos#Criando scripts]]
 Vamos criar **um script no Player**, **ativar o modelo** e colocá-lo na **pasta scripts**
@@ -207,7 +209,6 @@ Ao fazer isso ele automaticamente vai detectar as células que possuem "tiles"
 ![TileSet.png](../imagens/GODOT/TileSet.png)
 Podemos ajustar usando a **borracha para apagar** e clicando nos tiles que quisermos selecionar (para selecionarmos tiles maiores basta segurar o shift)
 ![TileSet2.png](../imagens/GODOT/TileSet2.png)
-
 ### TileMap
 Depois de configurar o TileSet, vamos mudar para a aba TileMap e ao fazermos isso podemos clicar no tile que quisermos, usar a ferramenta de pintura e ir montando todo o nosso cenário
 ![TileMap.png](../imagens/GODOT/TileMap.png)
@@ -217,7 +218,6 @@ Depois de configurar o TileSet, vamos mudar para a aba TileMap e ao fazermos iss
 Podemos montar o level sendo algo da seguinte forma:
 ![Brackeys_Jogo1_img13.png](../imagens/GODOT/Brackeys_Jogo1_img13.png)
 - Observe que a gente consegue fazer a árvore do tamanho que a gente quiser "montando" os tiles
-
 ### Physics Layers
 Agora que temos nosso cenário, vamos precisar **adicionar física a ele**, para isso vamos **clicar no TileSet nas propriedades do TileMapLayer** e em **Physics Layers** selecionar "**+ Adicionar Elemento**"
 Depois vamos novamente em **TileSet**, clicar em "**Pintar**" e no **seletor de propriedades** escolher, dentro de **Física**, a opção "**Camada de Física 0**"
@@ -230,3 +230,74 @@ Depois que fizermos esse ajuste, **essa será a nova área de colisão**, então
 Se precisarmos "pegar" a área de algum tile que criamos podemos **usar o conta gotas** que fica ao lado do "Pintar"
 Para voltar ao formato padrão, é só clicar em "**Redefinir para formato de tile padrão**" acima do "Apagar" que vimos anteriormente
 ![Brackeys_Jogo1_img14.png](../imagens/GODOT/Brackeys_Jogo1_img14.png)
+# Platforms
+Vamos criar algumas plataformas capazes de se movimentar no jogo
+Como para criar qualquer elemento, vamos criar uma nova cena e para o nó raiz vamos usar um AnimatableBody2D
+## AnimatableBody2D
+É o nó que vamos usar quando queremos **animar um nó** mas que ele **ainda mantenha as propriedades de colisão**
+- A diferença dele pro StaticBody2D é que ele **leva o player junto quando se move**
+Primeiramente vamos renomear o nó para "Platform" e em seguida adicionar os nós filhos:
+- **Sprite2D** e vamos fazer o ajuste da imagem em [[How to make a Video Game - Godot Beginner Tutorial (Brackeys)#Sprite2D]]
+- **CollisionShape2D**: selecionando um retângulo e ajustando a imagem
+	- Para conseguir **pular de baixo pra cima na plataforma** (e não cair dela) vamos habilitar o "**One Way Collision**"
+		- Com isso ele consegue estar em baixo da plataforma e pular pra cima sem a colisão mas quando tiver em cima da plataforma ele não cai
+
+Para utilizar a plataforma que criamos no game basta arrastar essa cena para a cena principal.
+Vamos arrastar de forma a termos 2 plataformas, uma fixa e uma móvel
+## AnimationPlayer
+Para adicionar a animação da plataforma móvel, após instanciá-la na cena "game" vamos buscar pelo nó chamado "**AnimationPlayer**" e adicioná-lo como filho da plataforma
+- O AnimationPlayer é bem poderoso (e fácil de usar) para criação de animações mais simples como um movimento lateral
+Agora vamos criar a animação da plataforma:
+- Para começar, no painel inferior vamos clicar em "**Animação**" e em "**Nova...**"
+- Escolha o nome da sua animação (como "mover")
+![AnimationPlayer1.png](../imagens/GODOT/AnimationPlayer1.png)
+- Em seguida, vamos clicar novamente na plataforma, posicioná-la na posição inicial (onde vai começar o movimento), ir no "**Transform**" do nó e clicar nessa **chavinha** para criar um **keyframe**
+- No popup que abrir podemos deixar marcada a segunda opção e clicar em "**Criar**"
+![AnimationPlayer2.png](../imagens/GODOT/AnimationPlayer2.png)
+- Assim que fizermos isso será aberto o painel de animação com qual animação estamos fazendo, que nesse caso é por posição (**position**), e com a faixa de duração da animação logo acima
+- Observe que o keyframe que criamos está na posição 0 segundos. Para criar o movimento vamos **arrastar essa barra azul até o 1**, levar a plataforma até a **posição final** e novamente clicar em **keyframe**
+![AnimationPlayer3.png](../imagens/GODOT/AnimationPlayer3.png)
+- Feito isso, precisamos ajustar a animação:
+	- Vamos primeiramente ativar o **auto-play**
+	- Depois vamos selecionar o **repetir animação** até chegar na opção de "**ida e volta**"
+		- Se deixarmos apenas repetir ele sempre começa na posição inicial e vai até a final ao invés de ficar indo e voltando como uma plataforma
+	- Se quisermos aumentar o tempo da animação podemos ajustar a **duração da animação** e **mover o keyframe da posição final** pra direita (como mostrado pela seta rosa)
+![AnimationPlayer4.png](../imagens/GODOT/AnimationPlayer4.png)
+Ao fazer isso teremos nossa plataforma movendo de um lado para o outro
+**Obs**: caso o player fique tremendo ou meio estranho na tela, existe a opção de mudar o "**Callback Mode**" ajustando o "**Process**" para **`Physics`** (por padrão é `Idle`)
+### Sprite2D
+Vamos adicionar um nó filho de **Sprite2D** e em "**Texture**" vamos arrastar a imagem "platforms.png"
+Essa imagem possui todas as plataformas e vamos precisar pegar apenas 1 delas, para isso
+- Vamos na propriedade "**Region**" e clicar em "**Ativo**"
+- Nas opções do Region vamos selecionar "**Editar Região**"
+- Na nova tela vamos mudar o "**Modo de Atração**" para "**Atração a Pixels**"
+- Vamos usar os pontinhos vermelhos para selecionar exatamente a imagem que queremos manter
+- Por fim, vamos clicar em "**Fechar**" e ao fazer isso vamos ter apenas a plataforma maior em verde no nosso jogo
+![EditorRegiao.png](../imagens/GODOT/EditorRegiao.png)
+# Pickups
+Agora vamos adicionar uma moeda que podemos coletar
+Para isso vamos criar uma nova cena e nessa cena adicionar um nó de "**Area2D**"
+## Area2D
+Vamos usar quando não quisermos colidir com nenhum objeto, apenas ter uma área onde podemos detectar colisões (**detectar se outro objeto entrou nessa área**)
+Agora vamos adicionar os nós filhos:
+- Nesse nó vamos adicionar um "**AnimatedSprite2D**" e usar o mesmo que fizemos em [[How to make a Video Game - Godot Beginner Tutorial (Brackeys)#AnimatedSprite2D]] para criar a animação utilizando o "**coin.png**" (vai ter 12 grids horizontais e 1 vertical), com FPS igual a 10 e auto-play ativado
+- Depois vamos adicionar um "**CollisionShape2D**" e ajustar a área
+
+Precisamos criar o script para a moeda ser coletável, então no nó raiz vamos adicionar um script
+## {SCRIPT} Itens coletáveis
+Dessa vez vamos começar com um template "Default", que vai conter:
+- O `extends` da Area2D 
+- As funções `_ready` e `_process`
+	- Que vai começar apenas com `pass` (que basicamente não vai fazer nada, apenas seguir)
+	- `_ready`: é **chamada assim que o nosso nó entra na árvore de cenas** (no início do jogo)
+		- Vamos colocar aqui o código que queremos que seja executado imediatamente ao começar o jogo
+	- `_process`: é **chamado a cada frame do jogo**
+		- É o loop do jogo, a engine fica repetindo continuamente (cerca de 60 vezes por segundo se FPS = 60)
+Vamos apagar tudo menos a primeira linha (extends)
+
+Vamos precisar 
+
+
+
+Feito isso podemos simplesmente renomear o nó raiz, salvar a cena e arrastar essa moeda para o nosso jogo
+Podemos usar **Ctrl+D** para duplicar essa moeda no jogo

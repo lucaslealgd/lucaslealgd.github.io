@@ -1,4 +1,4 @@
-![[editarScript.png]]# O que é GODOT?
+# O que é GODOT?
 > Godot é um motor (engine) de jogos 2D e 3D de uso geral projetado para dar suporte a qualquer tipo de projeto. Você pode usá-lo para criar jogos ou aplicativos que podem ser lançados em computadores, celulares e também na internet. - [O que é o Godot? - Documentação Oficial](https://docs.godotengine.org/pt-br/4.x/getting_started/introduction/introduction_to_godot.html#:~:text=Godot%20%C3%A9%20um%20motor%20(engine)%20de%20jogos%202D%20e%203D%20de%20uso%20geral%20projetado%20para%20dar%20suporte%20a%20qualquer%20tipo%20de%20projeto.%20Voc%C3%AA%20pode%20us%C3%A1%2Dlo%20para%20criar%20jogos%20ou%20aplicativos%20que%20podem%20ser%20lan%C3%A7ados%20em%20computadores%2C%20celulares%20e%20tamb%C3%A9m%20na%20internet.)
 # Instalação
 - Acessar: **[godotengine.org](https://godotengine.org/download/)**
