@@ -70,11 +70,11 @@ Lá no início dessa nota eu comentei sobre "*lost in the middle*" mas não expl
 Quando eu fiz isso, a resposta foi:
 > “Lost in the middle” é um fenômeno observado em modelos de linguagem (LLMs) em que o desempenho cai quando a informação relevante está no **meio** de um contexto longo, em vez de no começo ou no fim.
 > 
-> > **De onde vem**
+> **De onde vem**
 > 
 > O termo ficou conhecido por um artigo de 2023 (Liu et al., “Lost in the Middle: How Language Models Use Long Contexts”). Os pesquisadores colocaram a resposta de uma pergunta em diferentes posições dentro de um conjunto de documentos e mediram a precisão. O resultado foi uma curva em forma de **U**: os modelos acertavam mais quando a informação estava no início (efeito de primazia) ou no final (efeito de recência), e erravam mais quando ela estava no meio.
 > 
-> > **Por que acontece**
+> **Por que acontece**
 > 
 > Não há uma explicação única, mas as hipóteses mais comuns são:
 > 
@@ -82,13 +82,13 @@ Quando eu fiz isso, a resposta foi:
 > - **Mecanismo de atenção e codificação de posição**: a atenção tende a favorecer tokens iniciais e recentes.
 > - **Diluição**: quanto mais texto, mais o sinal relevante compete com ruído.
 > 
-> > **Por que importa na prática**
+> **Por que importa na prática**
 > 
 > - Em **RAG** (busca + geração), a ordem dos documentos recuperados influencia a resposta.
 > - Em prompts longos, instruções importantes escondidas no meio podem ser ignoradas.
 > - Ter uma janela de contexto grande não garante que o modelo use bem tudo o que cabe nela.
 > 
-> > **Como mitigar**
+> **Como mitigar**
 > 
 > - Colocar as informações e instruções mais importantes no **início ou no fim** do prompt.
 > - Reordenar os documentos recuperados, deixando os mais relevantes nas pontas.
@@ -110,15 +110,15 @@ Nesse caso, a minha resposta já foi bem mais direta:
 > 
 > **Dica prática**: coloque o que é mais importante no início ou no final do seu pedido.
 
-Observa que quanto melhor você consegue pedir pra ele o que você quer, mais adequada será a sua resposta.
+Observe que quanto melhor você consegue pedir pra ele o que você quer, mais adequada será a sua resposta.
 É importante entender que em um LLM, para uma mesma pergunta, **a resposta gerada quase nunca será igual**. Isso acontece pois o resultado do modelo é um texto previsto e não um texto decorado.
 - Na hora de gerar o token seguinte, ele vai **sortear entre os mais prováveis** e esse sorteio acaba gerando respostas diferentes
-Por isso a sua resposta é diferente da minha mas as técnicas usadas pra melhorar aqui também vão funcionar ai.
+Por isso a sua resposta é diferente da minha mas as técnicas usadas pra melhorar aqui também vão funcionar aí.
 
 E você pode continuar a conversa no **mesmo chat** como:
 > me dá um exemplo disso no meu dia a dia
 
-Observa que agora **você não precisou trazer todo o contexto** novamente pois ele já tem essa informação do histórico desse mesmo chat. A minha resposta foi:
+Observe que agora **você não precisou trazer todo o contexto** novamente pois ele já tem essa informação do histórico desse mesmo chat. A minha resposta foi:
 > Imagine que você cola na IA uma conversa de grupo bem longa (umas 200 mensagens) e pede: “Me diga quando e onde ficou combinado o churrasco.”
 > 
 > Se a combinação do dia e do local aconteceu **no meio** da conversa, no meio de várias outras mensagens, a IA pode errar, dizer que não encontrou ou pegar uma informação do começo ou do fim que não era a definitiva.
@@ -129,7 +129,7 @@ Observa que agora **você não precisou trazer todo o contexto** novamente pois 
 > - Se souber mais ou menos onde está a informação, avise: “Olha a parte sobre o churrasco, que deve estar no meio”.
 
 Inclusive, se você selecionar um trecho da conversa você pode perguntar algo especificamente sobre isso, por exemplo eu selecionei esses 3 últimos bullet points, cliquei em responder como mostrado abaixo e fiz a pergunta:
-![[responderClaude.png]]
+![responderClaude.png](../../imagens/Claude/responderClaude.png)
 > se eu fizer isso então eu não teria lost in the middle? preciso fazer os 3?
 
 E a resposta:
@@ -148,6 +148,14 @@ Repara que na primeira ele apontou os 3 meio que como se fossem iguais, só quan
 
 Se você quiser, você pode continuar essa conversa perguntando qualquer coisa que te desperte curiosidade. Só que agora vamos dar um passo além: vamos falar de um problema real que você tenha.
 
+E aqui eu quero te dar outra dica antes da gente seguir: Lembra que eu falei que **tudo que estiver no mesmo chat vai servir de contexto** pra sua conversa?
+Se você começar perguntando sobre lost in the middle e depois pedir ajuda para escrever um e-mail naquele mesmo chat, você tá guardando toda a conversa sobre lost in the middle de forma desnecessária e como falamos isso consome tokens (que você tem um limite)
+Então **a melhor forma de começar a falar sobre um novo assunto é criando um novo chat** e quando você quiser é só voltar em chats antigos para continuar aquela conversa.
+
+> ***Nossa Lucas, mas aí eu vou ficar com 1 milhão de chats abertos***
+
+Pro Claude isso não é um problema mas se você achar melhor para se organizar você sempre pode **clicar nos 3 pontinhos na frente de cada chat e pedir pra apagar**.
+![apagarChat.png](../../imagens/Claude/apagarChat.png)
 ### Problema real
 Vamos supor que você está no trabalho e tem um arquivo Excel com todos os dados de clientes da sua empresa e quer pedir ajuda ao Claude para analisar as informações. O que você faria?
 
