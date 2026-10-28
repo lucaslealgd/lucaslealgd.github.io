@@ -5,7 +5,7 @@ Depois ele faz algumas perguntas, responda de acordo com suas preferências (é 
 # A interface do Claude
 Assim que abri-lo, essa será a primeira tela:
 ![telaClaude.png](../../imagens/Claude/telaClaude.png)
-E pra entendê-la melhor precisamos relembrar um conceito que está em [[Claude do zero!#LLM]] sobre **janela de contexto**:
+E pra entendê-la melhor precisamos relembrar um conceito que está em [[Claude do zero#LLM]] sobre **janela de contexto**:
 - **O modelo só vai saber o que você tiver passado pra ele naquela conversa**, então qualquer informação fora disso vai ser ignorada (se você falou em outra conversa, se é um arquivo que tá no seu computador ou até se é uma informação que ele não foi ensinado)
 	- O aplicativo tem uma memória, então algumas coisas básicas que ele "julgar" relevante ele vai lembrar. Como isso é automático e não podemos escolher o que entra, não serve como **contexto** (para isso devemos usar projetos ou anexar arquivos de contexto)
 - Importante: **janela tem limite e custo** e é por isso que não vamos sempre enviar tudo (além de gerar outros problemas que podemos falar depois, mas pra quem tiver mais curiosidade *pode pesquisar por lost in the middle, dilução de atenção, contaminação por contexto antigo e principalmente CUSTOS e LATÊNCIA*)
@@ -40,7 +40,7 @@ Dito isso, vamos considerar o que temos nessa primeira tela, sendo o principal:
 		- IA é meio, não fim!
 		- E que bom, pois isso garante o nosso emprego
 # Como conversar com o Claude
-Antes de falar seu primeiro oi, é preciso entender que o que o Claude faz é rodar um LLM ([[Claude do zero!#LLM]]) e que pra esse tipo de modelo **quanto melhor você for em ter claro o que precisa, conseguir colocar isso em palavras e trazer o contexto: melhor será o resultado que ele vai te entregar!**
+Antes de falar seu primeiro oi, é preciso entender que o que o Claude faz é rodar um LLM ([[Claude do zero#LLM]]) e que pra esse tipo de modelo **quanto melhor você for em ter claro o que precisa, conseguir colocar isso em palavras e trazer o contexto: melhor será o resultado que ele vai te entregar!**
 É muito normal a gente ver algo do tipo: "ai mas o Claude / ChatGPT não tá sabendo gerar o que eu quero", "ele não consegue me dar o que eu preciso" e na maioria das vezes o grande problema é que muita gente não sabe como usar essas ferramentas (e que a partir de agora não vai ser mais o seu caso)
 E o que vai te diferenciar em uma entrevista e até usando qualquer uma dessas "IAs" vai ser exatamente isso, sua capacidade de gerar resultados corretos (conteúdo verdadeiro e conferido, sem alucinação), completos (respondendo ao que foi pedido, sem deixar buracos nem inventar escopo) e adequados a quem vai receber (formato, tom, tamanho)
 ## Pilares de uma boa conversa
