@@ -51,7 +51,7 @@ Recursos: [buildingasecondbrain.com/resources](https://buildingasecondbrain.com/
 13. Sempre que criar uma nota, pergunte-se: "Como posso tornar isso o mais útil possível para usar no futuro?" Você começará a anotar as palavras e frases que explicam por que criou a nota, em que estava pensando e o que exatamente chamou sua atenção. **Suas notas serão inúteis se você não conseguir decifrá-las no futuro ou se forem tão longas que você não vai sequer tentar**.
 
 14. Talvez sejam necessárias centenas de páginas e milhares de palavras para explicar completamente uma ideia complexa, mas **sempre há uma forma de transmitir a mensagem principal em apenas uma ou duas frases**. Einstein ficou famoso por resumir sua nova e revolucionária teoria da física com a equação E = mc2. Se ele foi capaz de destilar todo o seu pensamento numa equação tão refinada, você certamente conseguirá resumir os pontos principais de qualquer artigo, livro, vídeo ou apresentação -> <b><u>Se Einstein foi capaz de resumir toda sua teoria em E=mc², você consegue resumir sua ideia em 1 ou 2 frases!</u></b>
-![](../imagens/Livros/CriandoUmSegundoCerebro/E=mc2.jpeg)
+![](E=mc2.jpeg)
 
 
 15. **A informação só se torna conhecimento** – pessoal, incorporado, verificado – **quando é utilizada**. Você só ganha confiança naquilo que sabe quando tem certeza de que funciona. Antes disso, tudo não passa de teoria.
@@ -134,7 +134,7 @@ Recursos: [buildingasecondbrain.com/resources](https://buildingasecondbrain.com/
 	2. 2 é o "petróleo": texto em negrito
 	3. 3 é "ouro": trechos realçados (amarelo, sublinhado, itálico)
 	4. 4 são as "joias": resumo executivo com suas próprias palavras
-	   ![SumarizacaoProgressiva](../imagens/Livros/CriandoUmSegundoCerebro/SumarizacaoProgressiva.png)
+	   ![SumarizacaoProgressiva](SumarizacaoProgressiva.png)
 
 48. Na verdade, essa é uma ótima forma de filtrar e reduzir o volume de notas que você cria – as melhores ideias e informações sempre permanecem na sua mente por algumas horas.
 
@@ -149,7 +149,7 @@ Recursos: [buildingasecondbrain.com/resources](https://buildingasecondbrain.com/
 		   	2. Por mais que pareça simples, para conseguir chegar nesse nível muito esforço foi feito
 			   	1. <b><u>"Se eu tivesse tido mais tempo, teria escrito uma carta mais curta" - Blaise Pascal</u></b>
 			   	2. O mesmo acontece em **documentários**, que é preciso captar muito material para depois ir cortando e deixar apenas o mais importante
-    ![O Touro - Picasso](../imagens/Livros/CriandoUmSegundoCerebro/PicassoTouro.png)
+    ![O Touro - Picasso](PicassoTouro.png)
 
 51. Você sempre deve partir do princípio de que **as notas não serão necessariamente úteis até que elas provem o contrário**. Você não tem a menor ideia de quais serão suas necessidades, desejos ou tarefas no futuro. Isso o obriga a ser conservador no tempo gasto ao criar uma Sumarização Progressiva para suas notas e a **só colocar a mão na massa quando estiver praticamente certo de que vai valer a pena**.
 	1. Outro **erro** comum é **criar um destaque sem um propósito em mente**
@@ -235,7 +235,7 @@ Recursos: [buildingasecondbrain.com/resources](https://buildingasecondbrain.com/
 		2. Se passarmos o tempo todo divergindo nunca chegaremos a lugar algum
 
 80. Explicando o **método CODE**:
-    ![Método CODE](../imagens/Livros/CriandoUmSegundoCerebro/MetodoCODE.jpg)
+    ![Método CODE](MetodoCODE.jpg)
 
 81. É doloroso cortar opções e escolher um caminho em detrimento de outro. **É triste ver uma ideia que você sabe que tem muito potencial ser cortada** de um roteiro ou história. É isso que torna o trabalho criativo tão desafiador.
 	1. Elas são cortadas mas seguindo esse método de organização **elas não são perdidas!**

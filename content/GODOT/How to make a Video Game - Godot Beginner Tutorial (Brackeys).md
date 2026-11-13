@@ -163,7 +163,7 @@ Podemos ajustar a câmera pro zoom que quisermos e aqui vamos usar **zoom = 4** 
 Agora quando clicamos em F6 na cena atual já podemos ver o nosso player na tela mas nada acontece pois ainda não criamos o **script** que vai permitir o player se mover
 Podemos ativar a propriedade "**Position Smoothing**" para que a câmera se mova de forma mais suave ao acompanhar o player
 Também é possível mudar a posição da câmera em relação ao player (tipo pra câmera ficar mais centralizada na cabeça do player, nos pés, etc)
-## {SCRIPT} Criando a movimentação
+## 📃 Criando a movimentação
 Agora já temos a câmera mas o jogador ainda está parado e o próximo passo é criar um script que será responsável pelo movimento do player
 Para criar scripts, leia: [[Primeiros Passos#Criando scripts]]
 Vamos criar **um script no Player**, **ativar o modelo** e colocá-lo na **pasta scripts**
@@ -278,26 +278,55 @@ Essa imagem possui todas as plataformas e vamos precisar pegar apenas 1 delas, p
 Agora vamos adicionar uma moeda que podemos coletar
 Para isso vamos criar uma nova cena e nessa cena adicionar um nó de "**Area2D**"
 ## Area2D
-Vamos usar quando não quisermos colidir com nenhum objeto, apenas ter uma área onde podemos detectar colisões (**detectar se outro objeto entrou nessa área**)
-Agora vamos adicionar os nós filhos:
-- Nesse nó vamos adicionar um "**AnimatedSprite2D**" e usar o mesmo que fizemos em [[How to make a Video Game - Godot Beginner Tutorial (Brackeys)#AnimatedSprite2D]] para criar a animação utilizando o "**coin.png**" (vai ter 12 grids horizontais e 1 vertical), com FPS igual a 10 e auto-play ativado
+Vamos usar quando não quisermos bloquear nenhum objeto, apenas ter uma área onde podemos detectar colisões (**detectar se outro objeto entrou nessa área**). Ou seja, o player atravessa essa área mas o contato com ela pode ser detectado
+Agora vamos renomear esse nó para "**Coin**" e adicionar os nós filhos:
+- Nesse nó vamos adicionar um "**AnimatedSprite2D**" e usar o mesmo que fizemos em [[How to make a Video Game - Godot Beginner Tutorial (Brackeys)#AnimatedSprite2D]] para criar a animação utilizando o "**coin.png**" (vai ter 12 grids horizontais (12 colunas) e 1 vertical (1 linha)), com FPS igual a 10 e auto-play ativado
 - Depois vamos adicionar um "**CollisionShape2D**" e ajustar a área
 
 Precisamos criar o script para a moeda ser coletável, então no nó raiz vamos adicionar um script
-## {SCRIPT} Itens coletáveis
+## 📃 Itens coletáveis
 Dessa vez vamos começar com um template "Default", que vai conter:
 - O `extends` da Area2D 
 - As funções `_ready` e `_process`
 	- Que vai começar apenas com `pass` (que basicamente não vai fazer nada, apenas seguir)
-	- `_ready`: é **chamada assim que o nosso nó entra na árvore de cenas** (no início do jogo)
-		- Vamos colocar aqui o código que queremos que seja executado imediatamente ao começar o jogo
+	- `_ready`: é **chamada assim que o nosso nó entra na árvore de cenas** 
+		- Vamos colocar aqui o código que queremos que seja executado imediatamente quando esse objeto entrar no jogo (nem todo objeto começa no jogo, ele pode surgir durante o jogo então ele não vai ser executado quando o jogo começa e sim quando esse objeto entra no jogo)
 	- `_process`: é **chamado a cada frame do jogo**
 		- É o loop do jogo, a engine fica repetindo continuamente (cerca de 60 vezes por segundo se FPS = 60)
-Vamos apagar tudo menos a primeira linha (extends)
+Vamos apagar tudo menos a primeira linha (extends) pois só queremos que algo seja feito quando o player entrar na área da moeda e para isso vamos usar ***sinais***! (mais em [[Scripts#Sinais]])
 
-Vamos precisar 
+Como a ação será feita quando o personagem entrar na área de colisão, vamos selecionar o sinal de "***body_entered***" da **Area2D**
 
+Para testar se o código está funcionando, podemos simplesmente usar um `print` dizendo que temos + 1 moeda, ficando com o seguinte código:
+```gdscript
+extends Area2D
 
+func _on_body_entered(body: Node2D) -> void:
+	print("+1 moeda")
+```
+E agora sempre que o personagem encosta em uma moeda estamos vendo o +1 moeda na saída do nosso jogo
+![MaisUmaMoeda.png](../imagens/GODOT/MaisUmaMoeda.png)
 
-Feito isso podemos simplesmente renomear o nó raiz, salvar a cena e arrastar essa moeda para o nosso jogo
+Para que a moeda desapareça quando o player encostar nela (não queremos dinheiro infinito) basta usar a função `queue_free`, sendo assim nosso código final seria:
+```gdscript
+extends Area2D
+
+func _on_body_entered(body: Node2D) -> void:
+	print("+1 moeda")
+	queue_free()
+```
+## Ajustando a colisão da Coin com o Player
+O problema agora com o nosso jogo é que essa mensagem vai ser exibida **independente de qual corpo entrar nessa área**, então se tivermos um inimigo se movendo e ele entrar na área ele também será capaz de coletar essa moeda e não é o que queremos
+Para resolver isso **podemos usar as camadas de colisão para a moeda detectar apenas o player!** Cada nó tem duas configurações de colisão: **Layer** (em quais grupos ele está) e **Mask** (quais grupos ele detecta). Vamos colocar o Player no Layer 2 e fazer a Coin escutar só o 2.
+
+Fazemos isso indo primeiramente no **Inspetor** do "**Player**", selecionando "**Collision**" e **desmarcando o Layer 1 e marcando o 2** (lembre-se de desmarcar o Layer 1).
+![CollisionLayer.png](../imagens/GODOT/CollisionLayer.png)
+
+Depois vamos no Inspetor de "**Coin**", novamente selecionar "**Collision**" mas agora vamos em **Mask e desmarcar a Mask 1 e marcar o 2**.
+![CollisionMask.png](../imagens/GODOT/CollisionMask.png)
+
+**O Collision Mask vai determinar com os elementos de qual Layer esse objeto irá colidir**. Então se o valor de Mask é igual a 2 a colisão será feita com todos os elementos que tiverem o valor de Layer igual a 2 (que foi o que fizemos pro Player). Com isso, a Coin irá colidir com o Player e nada mais!
+
+Feito isso podemos simplesmente salvar a cena e arrastar essa moeda para o nosso jogo
 Podemos usar **Ctrl+D** para duplicar essa moeda no jogo
+- O script criado é único, mas cada instância da moeda que colocamos no jogo vai ter esse script atuando de forma totalmente independente das outras moedas (o que acontece em uma não afeta a outra)
